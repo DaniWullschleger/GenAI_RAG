@@ -1,0 +1,10 @@
+# Ignore virtual environment
+venv/
+
+# Ignore configuration file with sensitive information
+config.txt
+
+# Other common ignores
+*.pyc
+__pycache__/
+.DS_Store
