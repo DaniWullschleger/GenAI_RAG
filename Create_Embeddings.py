@@ -3,9 +3,21 @@ import numpy as np
 import pandas as pd
 import os
 import fitz  # PyMuPDF
+import time
+import shutil
 
-# Initialize the model
-model = SentenceTransformer('all-MiniLM-L6-v2')
+
+def clear_directory(folder_path):
+    for filename in os.listdir(folder_path):
+        file_path = os.path.join(folder_path, filename)
+        try:
+            if os.path.isfile(file_path) or os.path.islink(file_path):
+                os.unlink(file_path)
+            elif os.path.isdir(file_path):
+                shutil.rmtree(file_path)
+        except Exception as e:
+            print(f'Failed to delete {file_path}. Reason: {e}')
+
 
 def load_and_chunk_texts(pdf_directory, documents):
     texts = []
@@ -23,62 +35,66 @@ def load_and_chunk_texts(pdf_directory, documents):
                         texts.append(chunk)
         except Exception as e:
             print(f"Error processing {filename}: {e}")
-        print(f"Processed {filename}: {len(texts)} chunks")
     return texts
 
 
-# Base directory for PDFs
-script_dir = os.path.dirname(os.path.abspath(__file__))
-pdf_base_directory = os.path.join(script_dir, 'data')
+def main():
+    # List of embedders to use
+    embedders = [
+        ('all-MiniLM-L6-v2', 'all-MiniLM-L6-v2'),
+        ('bert-base-nli-mean-tokens', 'bert-base-nli-mean-tokens'),
+        ('roberta-large-nli-stsb-mean-tokens', 'roberta-large-nli-stsb-mean-tokens'),
+        ('all-mpnet-base-v2', 'all-mpnet-base-v2')
+    ]
 
-topics_config = {
-    "module_overview": {
-        "documents": [
-            {"filename": "module descriptions.pdf", "chunk_size": 200},
-            {"filename": "module table.pdf", "chunk_size": 50},
-        ]
-    },
-    "module_details": {
-        "documents": [
-            {"filename": "module descriptions.pdf", "chunk_size": 200}
-        ]
-    },
-    "module_planning": {
-        "documents": [
-            {"filename": "timetable.pdf", "chunk_size": 50},
-            {"filename": "general_info_msc.pdf", "chunk_size": 100},
-            {"filename": "plan-default.pdf", "chunk_size": 100},
-        ]
-    },
-}
+    # Directories setup
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    pdf_base_directory = os.path.join(script_dir, 'data')
+    storage_dir = os.path.join(script_dir, 'embeddings')
+    os.makedirs(storage_dir, exist_ok=True)
 
-# Directory to store the embeddings and documents
-storage_dir = os.path.join(script_dir, 'embeddings')
-os.makedirs(storage_dir, exist_ok=True)
+    topics_config = {
+        # Topics config remains the same
+    }
 
-for topic, config in topics_config.items():
-    # Determine the full path to the PDFs for the current topic
-    pdf_directory = os.path.join(pdf_base_directory, topic)
+    # Clear the topic-specific directory before storing new embeddings
+    for topic, config in topics_config.items():
+        topic_dir = os.path.join(storage_dir, topic)
+        os.makedirs(topic_dir, exist_ok=True)
+        clear_directory(topic_dir)
 
-    # Ensure the PDF directory exists
-    os.makedirs(pdf_directory, exist_ok=True)
+    for embedder_name, embedder_id in embedders:
+        print(f"Processing with embedder: {embedder_name}")
+        model = SentenceTransformer(embedder_id)  # Initialize the model for the current embedder
 
-    # Load and chunk texts for the current topic
-    texts = load_and_chunk_texts(pdf_directory, config["documents"])
+        for topic, config in topics_config.items():
+            pdf_directory = os.path.join(pdf_base_directory, topic)
+            os.makedirs(pdf_directory, exist_ok=True)  # Ensure PDF directory exists
+            texts = load_and_chunk_texts(pdf_directory, config["documents"])  # Load and chunk texts
 
-    # Generate embeddings
-    docs_embeddings = model.encode(texts, show_progress_bar=True)
-    docs_embeddings_np = np.array(docs_embeddings)
+            start_time = time.time()  # Capture start time
+            docs_embeddings = model.encode(texts, show_progress_bar=True)  # Generate embeddings
+            end_time = time.time()  # Capture end time
+            duration = end_time - start_time  # Calculate duration
 
-    # Create topic-specific directory within the storage directory
-    topic_dir = os.path.join(storage_dir, topic)
-    os.makedirs(topic_dir, exist_ok=True)
+            docs_embeddings_np = np.array(docs_embeddings)
+            topic_dir = os.path.join(storage_dir, topic)
+            os.makedirs(topic_dir, exist_ok=True)
 
-    # Store embeddings and documents
-    embeddings_path = os.path.join(topic_dir, 'embeddings.npy')
-    docs_path = os.path.join(topic_dir, 'docs.pkl')
+            # Adjust filenames to include the embedder's name
+            embeddings_filename = f'embeddings_{embedder_name}.npy'
+            docs_filename = f'docs_{embedder_name}.pkl'
 
-    np.save(embeddings_path, docs_embeddings_np)
-    pd.DataFrame(texts, columns=['document']).to_pickle(docs_path)
+            embeddings_path = os.path.join(topic_dir, embeddings_filename)
+            docs_path = os.path.join(topic_dir, docs_filename)
 
-    print(f"Processed and saved embeddings and documents for {topic}")
+            # Store embeddings and documents
+            np.save(embeddings_path, docs_embeddings_np)
+            pd.DataFrame(texts, columns=['document']).to_pickle(docs_path)
+
+            print(f"Processed and saved embeddings and documents for {topic} with {embedder_name}")
+            print(f"Embedding generation for {topic} using {embedder_name} took {duration:.2f} seconds.")
+
+
+if __name__ == "__main__":
+    main()
