@@ -1,0 +1,930 @@
+{
+    "modules": [
+        {
+            "code": "START",
+            "name": "Start",
+            "ects": 3,
+            "semester": 1,
+            "group": "Required Module",
+            "reqs": [],
+            "topics": []
+        },
+        {
+            "code": "W.MSCIDS_CSC01",
+            "name": "Computer Science Concepts for\nData Scientists",
+            "ects": 3,
+            "semester": 1,
+            "group": "Required Module",
+            "reqs": [
+                "START"
+            ],
+            "topics": [
+                "Computer systems and networks",
+                "Software Development",
+                "Data modeling and processing"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DDE01",
+            "name": "Design for Data Experiments",
+            "ects": 3,
+            "semester": 1,
+            "group": "Required Module",
+            "reqs": [
+                "START"
+            ],
+            "topics": [
+                "Properties of experiments",
+                "Design of experiments",
+                "Carrying out experiments",
+                "Data structures and types"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DQU01",
+            "name": "Data Quality",
+            "ects": 3,
+            "semester": 2,
+            "group": "Required Module",
+            "reqs": [
+                "W.MSCIDS_DDE01"
+            ],
+            "topics": [
+                "Principles",
+                "Dimensions",
+                "Detecting Problems",
+                "Model-Driven Development",
+                "Big Data"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_PDS01",
+            "name": "Python for Data Science",
+            "ects": 6,
+            "semester": 1,
+            "group": "Required Module",
+            "reqs": [
+                "START"
+            ],
+            "topics": [
+                "Data Types (List, Dict, ...)",
+                "Control structures",
+                "Read/Write data (CSV, JSON)",
+                "Functions",
+                "Object oriented concepts",
+                "Recursion",
+                "Use of packages/modules",
+                "Testing",
+                "Lambda concept",
+                "Decorator concept",
+                "Base concepts",
+                "Base concepts",
+                "EnterpriseLab (Linux-VM)",
+                "Software Development",
+                "JupyterNotebook",
+                "PyCharm"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_SA01",
+            "name": "Classical and Bayesian Statistics",
+            "ects": 6,
+            "semester": 1,
+            "group": "Required Module",
+            "reqs": [
+                "START"
+            ],
+            "topics": [
+                "Exploratory data analysis",
+                "Introduction to probability theory",
+                "Probability distributions",
+                "Hypothesis testing",
+                "Regression models",
+                "Introduction"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_CIP02",
+            "name": "Data Collection, Integration and\nPreprocessing",
+            "ects": 3,
+            "semester": 2,
+            "group": "Required Module",
+            "reqs": [
+                "W.MSCIDS_CSC01",
+                "W.MSCIDS_PDS01"
+            ],
+            "topics": [
+                "Manipulate Data Structures",
+                "ETL Process",
+                "Web Data Scraping",
+                "Data Collection",
+                "Data Integration",
+                "Data Preprocessing",
+                "Medium concepts",
+                "Connection Methods (RDP, SSH) ",
+                "Medium concepts",
+                "EnterpriseLab (Linux-VM)",
+                "Software Development",
+                "JupyterNotebook",
+                "PyCharm",
+                "Pandas"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DBM02",
+            "name": "Database Management for\nData Scientists",
+            "ects": 3,
+            "semester": 2,
+            "group": "Required Module",
+            "reqs": [
+                "W.MSCIDS_CSC01",
+                "W.MSCIDS_PDS01"
+            ],
+            "topics": [
+                "Database theory",
+                "Data modeling",
+                "Relational language SQL",
+                "SQL DDL/DML/DQL",
+                "SQL performance optimization",
+                "Multi-dimensional data analysis with SQL"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_MPM02",
+            "name": "Applied Machine Learning and\nPredictive Modelling 1",
+            "ects": 3,
+            "semester": 2,
+            "group": "Required Module",
+            "reqs": [
+                "W.MSCIDS_SA01"
+            ],
+            "topics": [
+                "Linear Regression",
+                "Generalised Linear Models",
+                "Generalised Additive Models",
+                "Support Vector Machines",
+                "Neural Networks",
+                "Agent-based Modelling",
+                "Approximate Bayesian Computation",
+                "Model Validation"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_RTP02",
+            "name": "Discrete Response, Time Series\nand Panel Data",
+            "ects": 3,
+            "semester": 2,
+            "group": "Required Module",
+            "reqs": [
+                "W.MSCIDS_SA01"
+            ],
+            "topics": [
+                "Discrete Response",
+                "Time Series",
+                "Panel Data",
+                "Quantitative description",
+                "Modeling",
+                "Forecasting"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_MPM03",
+            "name": "Applied Machine Learning and\nPredictive Modelling 2",
+            "ects": 3,
+            "semester": 2,
+            "group": "Required Module",
+            "reqs": [
+                "W.MSCIDS_MPM02"
+            ],
+            "topics": [
+                "Dimensionality reduction",
+                "Multi-dimensional Scaling (MDS)",
+                "Clustering",
+                "Classification",
+                "Trees and ensemble methods"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DDB01",
+            "name": "Data-Driven Business Models",
+            "ects": 3,
+            "semester": 1,
+            "group": "General Core Elective Module",
+            "reqs": [],
+            "topics": [
+                "Business Model Canvas",
+                "Business Model Innovation",
+                "Digital Ecosystems",
+                "Data-Driven Insurance"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DDP01",
+            "name": "Designing and Managing Data Projects",
+            "ects": 3,
+            "semester": 1,
+            "group": "General Core Elective Module",
+            "reqs": [],
+            "topics": [
+                "Managing data projects",
+                "Project management expertise",
+                "Real-life pitching situations",
+                "Big Data / Analytics",
+                "Hybrid model",
+                "Communicating the results",
+                "Independent work",
+                "Reflection",
+                "System Thinking",
+                "Relevance of HCD",
+                "Mindset, concepts, processes",
+                "Trends and criticism",
+                "Tools"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DI01",
+            "name": "Data Ideation",
+            "ects": 3,
+            "semester": 1,
+            "group": "General Core Elective Module",
+            "reqs": [],
+            "topics": [
+                "Big Data / Analytics",
+                "Hybrid model",
+                "Communicating the results",
+                "Independent work",
+                "Reflection"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_LIA01",
+            "name": "Linear Algebra 1",
+            "ects": 3,
+            "semester": 1,
+            "group": "Required Module",
+            "reqs": [],
+            "topics": [
+                "Matrix algebra",
+                "Linear Systems"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_LIA02",
+            "name": "Linear Algebra 2",
+            "ects": 3,
+            "semester": 1,
+            "group": "General Core Elective Module",
+            "reqs": [
+                "W.MSCIDS_LIA01"
+            ],
+            "topics": [
+                "Euclidean vector space",
+                "Linear maps",
+                "Matrix decompositions",
+                "Norms and Distances"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_RB01",
+            "name": "R-Bootcamp",
+            "ects": 3,
+            "semester": 1,
+            "group": "General Core Elective Module",
+            "reqs": [],
+            "topics": [
+                "Basic objects",
+                "Simple computations",
+                "Basic Graphs",
+                "Missing values and writing functions",
+                "Control structures",
+                "add-on packages",
+                "Dynamics documents",
+                "Web Data Scraping"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_HCD02",
+            "name": "Human Centered Design",
+            "ects": 3,
+            "semester": 2,
+            "group": "General Core Elective Module",
+            "reqs": [],
+            "topics": [
+                "Relevance of HCD",
+                "Mindset, concepts, processes",
+                "Trends and criticism",
+                "Tools"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_MDE02",
+            "name": "Management of Digital Enterprise",
+            "ects": 3,
+            "semester": 2,
+            "group": "General Core Elective Module",
+            "reqs": [],
+            "topics": [
+                "business models",
+                "business processes",
+                "Megatrend Digitalisation",
+                "Enabling Technologies",
+                "Big data and Artificial Intelligence",
+                "Virtual and augmented reality",
+                "Robotics",
+                "Drones",
+                "Blockchain",
+                "3-D Printing",
+                "Internet of Things",
+                "Individualization",
+                "Intermediation and Sharing",
+                "Socialisation",
+                "Automation",
+                "Mobilisation and Democratisation",
+                "Disruptive Forces",
+                "Industry Disruption",
+                "Business Model Innovation",
+                "Digital Business Models",
+                "Digital Strategies",
+                "Digital Maturity Models",
+                "Digital Use Cases",
+                "Innovation and the DCF",
+                "Impact on Employment",
+                "AI and Ethics",
+                "Cyber Crime and Security"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_CW03",
+            "name": "Scientific Writing and\nPresentation Skills",
+            "ects": 3,
+            "semester": 3,
+            "group": "General Core Elective Module",
+            "reqs": [],
+            "topics": [
+                "Planning and structuring SW and presentations",
+                "Language style and form, best practices (including APA)",
+                "Persuasive verbal, non-verbal and visual communication",
+                "Stakeholder communication",
+                "Anglo-American/German conventions"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DVN03",
+            "name": "Data Visualisation and Narration",
+            "ects": 3,
+            "semester": 3,
+            "group": "General Core Elective Module",
+            "reqs": [],
+            "topics": [
+                "Narration",
+                "Human perception",
+                "Information processing",
+                "Data Storytelling",
+                "Visual Communication",
+                "User Experience",
+                "35.06",
+                "Communicating the results",
+                "Tools"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_EBD03",
+            "name": "Ethical Issues of Big Data",
+            "ects": 3,
+            "semester": 3,
+            "group": "General Core Elective Module",
+            "reqs": [],
+            "topics": [
+                "Digital society and ethics",
+                "Data Ethics",
+                "Algorithm Ethics",
+                "Corporate Digital Responsibility (CDR)",
+                "Ethical Analysis Toolbox"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_LBD03",
+            "name": "Legal Issues of Big Data",
+            "ects": 3,
+            "semester": 3,
+            "group": "General Core Elective Module",
+            "reqs": [],
+            "topics": [
+                "Data Protection",
+                "Data Economy"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_NET02",
+            "name": "Collaborative Innovation Networks",
+            "ects": 3,
+            "semester": 3,
+            "group": "General Core Elective Module",
+            "reqs": [
+                "W.MSCIDS_MPM02",
+                "W.MSCIDS_CIP02"
+            ],
+            "topics": [
+                "Human Dynamics",
+                "Collaborative Innovation Networks",
+                "Sentiment Analysis",
+                "Coolhunting",
+                "Coolfarming",
+                "Face emotion recognition",
+                "Voice emotion recognition"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_WDS02",
+            "name": "Web and Data Scraping with R",
+            "ects": 3,
+            "semester": 3,
+            "group": "General Core Elective Module",
+            "reqs": [
+                "W.MSCIDS_MPM02",
+                "W.MSCIDS_RB01"
+            ],
+            "topics": [
+                "Web Data Scraping",
+                "REST APIs",
+                "MySQL/MariaDB",
+                "Relational language SQL",
+                "Relational Database Services",
+                "Data modeling and processing",
+                "Parallel code",
+                "Proxies",
+                "Feature Extraction"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DL04",
+            "name": "Digital Leadership",
+            "ects": 3,
+            "semester": 4,
+            "group": "General Core Elective Module",
+            "reqs": [],
+            "topics": [
+                "Innovation and change leadership",
+                "Collaborative leadership",
+                "Coaching as leadership skill",
+                "In-depth study of leadership and change",
+                "Self-management"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DIT04",
+            "name": "Interview Training for\nData Scientists",
+            "ects": 3,
+            "semester": 4,
+            "group": "General Core Elective Module",
+            "reqs": [],
+            "topics": [
+                "CV and Cover Letter Preparation",
+                "Technical data challenge",
+                "Individual feedback",
+                "Coaching sessions"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_AMS03",
+            "name": "Analysis and Modelling of\nSocial Interactions",
+            "ects": 3,
+            "semester": 3,
+            "group": "Core Elective Module Advanced Topics",
+            "reqs": [],
+            "topics": [
+                "Social Complexity",
+                "Social Network Data",
+                "Network Structures",
+                "Network Metrics",
+                "Network Visualizations",
+                "Clusters, Cliques, and Communities",
+                "Static & Time-evolving Networks",
+                "Contagion & Infection"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_BDL03_1",
+            "name": "NoSQL Lab with\nPython & MongoDB",
+            "ects": 3,
+            "semester": 3,
+            "group": "Core Elective Module Advanced Topics",
+            "reqs": [
+                "W.MSCIDS_DBM02",
+                "W.MSCIDS_CIP02"
+            ],
+            "topics": [
+                "Database Programming",
+                "NoSQL",
+                "MongoDB",
+                "MySQL/MariaDB",
+                "PostgreSQL",
+                "JupyterNotebook",
+                "PyCharm"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_BDL03_2",
+            "name": "Big Data in the Cloud",
+            "ects": 3,
+            "semester": 3,
+            "group": "Core Elective Module Advanced Topics",
+            "reqs": [
+                "W.MSCIDS_DBM02",
+                "W.MSCIDS_CIP02"
+            ],
+            "topics": [
+                "Business Requirements",
+                "Data Lake Systems",
+                "Azure Cloud",
+                "Data Factory",
+                "Databricks"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_CTA03",
+            "name": "Computational Language\nTechnologies",
+            "ects": 3,
+            "semester": 3,
+            "group": "Core Elective Module Advanced Topics",
+            "reqs": [
+                "W.MSCIDS_MPM02",
+                "W.MSCIDS_CIP02"
+            ],
+            "topics": [
+                "Linguistic Concepts",
+                "Text Processing",
+                "Exploratory Text Analysis",
+                "Representation learning",
+                "Similarity & Classification",
+                "Deep Learning",
+                "Explain ML models",
+                "Productionizing ML models"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DLB03",
+            "name": "Deep Learning",
+            "ects": 3,
+            "semester": 3,
+            "group": "Core Elective Module Advanced Topics",
+            "reqs": [
+                "W.MSCIDS_MPM02",
+                "W.MSCIDS_MPM03"
+            ],
+            "topics": [
+                "Fully connected NNs",
+                "Convolutional NNs",
+                "Recurrent Neural Networks (RNN)",
+                "Transformer",
+                "Graph Neural Network",
+                "Image classification",
+                "Object localization and detection",
+                "Semantic and instance segmentation",
+                "Video analysis",
+                "Image generation"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_CVI03",
+            "name": "Computer Vision",
+            "ects": 3,
+            "semester": 3,
+            "group": "Core Elective Module Advanced Topics",
+            "reqs": [
+                "W.MSCIDS_DLB03"
+            ],
+            "topics": [
+                "Fully connected NNs",
+                "Convolutional NNs",
+                "Training and optimization of NNs",
+                "Recurrent Neural Networks (RNN)",
+                "Transformer",
+                "Graph Neural Network"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DWL03",
+            "name": "Data Warehousing and\nData Lake Systems",
+            "ects": 6,
+            "semester": 3,
+            "group": "Core Elective Module Advanced Topics",
+            "reqs": [
+                "W.MSCIDS_DBM02"
+            ],
+            "topics": [
+                "Business Requirements",
+                "Data Lake Systems",
+                "Data Lake Systems",
+                "Data Warehouse Systems",
+                "Data Analysis in the Data Lake",
+                "Schema on Read",
+                "Data Pipelines",
+                "Relational Database Services",
+                "Data Collection",
+                "Data Preprocessing",
+                "Manipulate Data Structures",
+                "ETL Process",
+                "REST APIs",
+                "Feature Extraction",
+                "Detecting Problems",
+                "Data imputation",
+                "Amazon Lamda Functions",
+                "Apache Airflow",
+                "AWS Storage Services",
+                "Tableau",
+                "AWS S3 Buckets",
+                "AWS RDS",
+                "AWS Glue"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_ETL03",
+            "name": "Modern Data Engineering",
+            "ects": 3,
+            "semester": 3,
+            "group": "Core Elective Module Advanced Topics",
+            "reqs": [
+                "W.MSCIDS_DBM02",
+                "W.MSCIDS_CIP02"
+            ],
+            "topics": [
+                "ETL Process",
+                "Principles",
+                "Data Lake Systems",
+                "Cloud Computing",
+                "Real time Streaming",
+                "Real time ELT Architectures",
+                "Data Streams",
+                "Robotic Process Automation",
+                "Web Data Scraping",
+                "Feature Extraction",
+                "Data Pipelines",
+                "Apache HOP",
+                "Apache/Confluent KAFKA",
+                "MySQL/MariaDB",
+                "Azure Cloud"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_PRA03",
+            "name": "Pattern Recognition in\nAudio-Signals",
+            "ects": 3,
+            "semester": 3,
+            "group": "Core Elective Module Advanced Topics",
+            "reqs": [
+                "W.MSCIDS_MPM02",
+                "W.MSCIDS_CIP02"
+            ],
+            "topics": [
+                "Audio-Signals",
+                "Pattern Recognition",
+                "Matrix algebra",
+                "Euclidean vector space",
+                "Linear maps",
+                "Matrix decompositions"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_REC03",
+            "name": "Recommender Systems",
+            "ects": 3,
+            "semester": 3,
+            "group": "Core Elective Module Advanced Topics",
+            "reqs": [
+                "W.MSCIDS_MPM02",
+                "W.MSCIDS_CIP02"
+            ],
+            "topics": [
+                "Content-based RS",
+                "Collaborative filtering",
+                "Matrix Factorization",
+                "Restricted Boltzmann Machines",
+                "Knowledge graph-based RS",
+                "Hybrid recommender"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DE_CRA01",
+            "name": "Customer Data Analytics",
+            "ects": 3,
+            "semester": "open",
+            "group": "Core Elective Module Domain Experience",
+            "reqs": [],
+            "topics": [
+                "Customer Experiences",
+                "Customer Journey",
+                "Customer Relationship Management"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DE_DAE01",
+            "name": "Data Analytics for Energy Systems\nand IoT",
+            "ects": 3,
+            "semester": "open",
+            "group": "Core Elective Module Domain Experience",
+            "reqs": [],
+            "topics": [
+                "Energy Systems",
+                "IoT",
+                "Principles",
+                "Collecting energy system data",
+                "Remote diagnosis",
+                "smart maintenance",
+                "Estimating residential energy demand",
+                "Load forecasting"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DE_FRD01",
+            "name": "Fraud Detection",
+            "ects": 3,
+            "semester": "open",
+            "group": "Core Elective Module Domain Experience",
+            "reqs": [],
+            "topics": [
+                "Strategies",
+                "Tools",
+                "Solutions",
+                "Lab Experience",
+                "Case Study"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DE_GD01",
+            "name": "Geospatial Data Analysis for\nSmart Communities",
+            "ects": 3,
+            "semester": "open",
+            "group": "Core Elective Module Domain Experience",
+            "reqs": [],
+            "topics": [
+                "Smart communities",
+                "Principles of georeferencing",
+                "Simulations",
+                "Movement patterns",
+                "Spatial data used for political purposes",
+                "Data preparation"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DE_HEA01",
+            "name": "Data Science in Healthcare",
+            "ects": 3,
+            "semester": "open",
+            "group": "Core Elective Module Domain Experience",
+            "reqs": [
+                "W.MSCIDS_SA01"
+            ],
+            "topics": [
+                "Healthcare",
+                "Data Science Role",
+                "Working with Data",
+                "R for data projects",
+                "Python for data projects"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DE_NER01",
+            "name": "Natural Experiments Using R",
+            "ects": 3,
+            "semester": "open",
+            "group": "Core Elective Module Domain Experience",
+            "reqs": [],
+            "topics": [
+                "Natural Experiments",
+                "Matching",
+                "Instrumental Variables",
+                "Difference-in-Differences",
+                "Regression Discontinuity Design",
+                "Natural Experiments",
+                "Regression models",
+                "Panel Data"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DE_ODS01",
+            "name": "Tourism and Open Destination\nData Space",
+            "ects": 3,
+            "semester": "open",
+            "group": "Core Elective Module Domain Experience",
+            "reqs": [],
+            "topics": [
+                "Tourism",
+                "Tableau",
+                "Geospatial Data",
+                "open data infrastructures",
+                "data visualizations",
+                "open data policy"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DE_SDA01",
+            "name": "Sport Data Analytics",
+            "ects": 3,
+            "semester": "open",
+            "group": "Core Elective Module Domain Experience",
+            "reqs": [],
+            "topics": [
+                "Sports",
+                "Sport Phenomena",
+                "Sports Data Analytics",
+                "Profiling / Scouting",
+                "Athlete Development"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DE_SUA01",
+            "name": "Sustainability Analytics",
+            "ects": 3,
+            "semester": "open",
+            "group": "Core Elective Module Domain Experience",
+            "reqs": [],
+            "topics": [
+                "Sustainability",
+                "Sustainability",
+                "Regression",
+                "Time-series analysis",
+                "System dynamics",
+                "Systems tools",
+                "Integrated assessment modeling",
+                "Sustainable development goals",
+                "Climate science",
+                "Finite resource management",
+                "Tourism",
+                "Agriculture",
+                "Infrastructure",
+                "Working with Data",
+                "Data sourcing and integration"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DE_TSA01",
+            "name": "Time Series Analysis in Finance",
+            "ects": 3,
+            "semester": "open",
+            "group": "Core Elective Module Domain Experience",
+            "reqs": [],
+            "topics": [
+                "Finance",
+                "Time Series Analysis in Finance",
+                "Principles of financial markets",
+                "Risk management",
+                "Portfolio management (Markowitz, CAPM)",
+                "Forecast models",
+                "Crypto assets",
+                "High frequency trading",
+                "Macroeconomic time series",
+                "Behavioral finance"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_LOG01",
+            "name": "Data-driven Supply Chain Management\nund Logistics",
+            "ects": 3,
+            "semester": "open",
+            "group": "Core Elective Module Domain Experience",
+            "reqs": [],
+            "topics": [
+                "Logistics",
+                "Supply network resilience",
+                "Network modelling",
+                "Smart logistics service design"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_GOV03",
+            "name": "Data Strategy and Governance",
+            "ects": 3,
+            "semester": 3,
+            "group": "Core Elective Module Advanced Topics",
+            "reqs": [
+                "W.MSCIDS_DBM02"
+            ],
+            "topics": [
+                "Data Strategy",
+                "Data maping",
+                "Cloud Governance",
+                "Data Ruirements engineering"
+            ]
+        },
+        {
+            "code": "W.MSCIDS_HVD03",
+            "name": "Hands-on Visualisation for\nData Science",
+            "ects": 3,
+            "semester": 3,
+            "group": "Core Elective Module Advanced Topics",
+            "reqs": [
+                "W.MSCIDS_DBM02",
+                "W.MSCIDS_PDS01"
+            ],
+            "topics": [
+                "Design Principles",
+                "Planning",
+                "Design Phase",
+                "Dasboards in production",
+                "Industry dashboard design",
+                "Tableau"
+            ]
+        }
+    ]
+}

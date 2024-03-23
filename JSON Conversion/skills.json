@@ -1,0 +1,4022 @@
+{
+    "modules": [
+        {
+            "code": "START",
+            "name": "Start",
+            "ects": 3,
+            "semester": 1,
+            "group": "RM",
+            "form": "RC",
+            "reqs": [],
+            "topics": [],
+            "pos": [
+                -220,
+                -60
+            ]
+        },
+        {
+            "code": "W.MSCIDS_CSC01",
+            "name": "Computer Science Concepts for\nData Scientists",
+            "ects": 3,
+            "semester": 1,
+            "group": "RM",
+            "form": "RC",
+            "reqs": [
+                "START"
+            ],
+            "topics": [
+                "11.01",
+                "11.02",
+                "11.03"
+            ],
+            "pos": [
+                90,
+                20
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DDE01",
+            "name": "Design for Data Experiments",
+            "ects": 3,
+            "semester": 1,
+            "group": "RM",
+            "form": "RC",
+            "reqs": [
+                "START"
+            ],
+            "topics": [
+                "22.01",
+                "22.02",
+                "22.03",
+                "22.04"
+            ],
+            "pos": [
+                90,
+                120
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DQU01",
+            "name": "Data Quality",
+            "ects": 3,
+            "semester": 2,
+            "group": "RM",
+            "form": "RC",
+            "reqs": [
+                "W.MSCIDS_DDE01"
+            ],
+            "topics": [
+                "14.01",
+                "14.02",
+                "14.03",
+                "14.04",
+                "14.05"
+            ],
+            "pos": [
+                420,
+                270
+            ]
+        },
+        {
+            "code": "W.MSCIDS_PDS01",
+            "name": "Python for Data Science",
+            "ects": 6,
+            "semester": 1,
+            "group": "RM",
+            "form": "RC",
+            "reqs": [
+                "START"
+            ],
+            "topics": [
+                "32.02",
+                "32.03",
+                "32.04",
+                "32.05",
+                "32.06",
+                "32.07",
+                "32.08",
+                "32.09",
+                "32.10",
+                "32.11",
+                "41.03",
+                "04.06",
+                "42.01",
+                "11.02",
+                "17.10",
+                "17.11"
+            ],
+            "pos": [
+                90,
+                -120
+            ]
+        },
+        {
+            "code": "W.MSCIDS_SA01",
+            "name": "Classical and Bayesian Statistics",
+            "ects": 6,
+            "semester": 1,
+            "group": "RM",
+            "form": "RC",
+            "reqs": [
+                "START"
+            ],
+            "topics": [
+                "05.01",
+                "05.02",
+                "05.03",
+                "05.04",
+                "05.05",
+                "06.01"
+            ],
+            "pos": [
+                90,
+                -270
+            ]
+        },
+        {
+            "code": "W.MSCIDS_CIP02",
+            "name": "Data Collection, Integration and\nPreprocessing",
+            "ects": 3,
+            "semester": 2,
+            "group": "RM",
+            "form": "RC",
+            "reqs": [
+                "W.MSCIDS_CSC01",
+                "W.MSCIDS_PDS01"
+            ],
+            "topics": [
+                "12.04",
+                "12.06",
+                "12.12",
+                "12.01",
+                "12.02",
+                "12.03",
+                "41.01",
+                "41.02",
+                "04.05",
+                "42.01",
+                "11.02",
+                "17.10",
+                "17.11",
+                "17.12"
+            ],
+            "pos": [
+                420,
+                70
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DBM02",
+            "name": "Database Management for\nData Scientists",
+            "ects": 3,
+            "semester": 2,
+            "group": "RM",
+            "form": "RC",
+            "reqs": [
+                "W.MSCIDS_CSC01",
+                "W.MSCIDS_PDS01"
+            ],
+            "topics": [
+                "18.01",
+                "18.02",
+                "18.03",
+                "18.04",
+                "18.05",
+                "18.06"
+            ],
+            "pos": [
+                420,
+                170
+            ]
+        },
+        {
+            "code": "W.MSCIDS_MPM02",
+            "name": "Applied Machine Learning and\nPredictive Modelling 1",
+            "ects": 3,
+            "semester": 2,
+            "group": "RM",
+            "form": "RC",
+            "reqs": [
+                "W.MSCIDS_SA01"
+            ],
+            "topics": [
+                "02.01",
+                "02.02",
+                "02.03",
+                "02.04",
+                "02.05",
+                "02.06",
+                "02.07",
+                "02.08"
+            ],
+            "pos": [
+                420,
+                -130
+            ]
+        },
+        {
+            "code": "W.MSCIDS_RTP02",
+            "name": "Discrete Response, Time Series\nand Panel Data",
+            "ects": 3,
+            "semester": 2,
+            "group": "RM",
+            "form": "RC",
+            "reqs": [
+                "W.MSCIDS_SA01"
+            ],
+            "topics": [
+                "05.06",
+                "05.07",
+                "05.08",
+                "05.10",
+                "05.11",
+                "05.12"
+            ],
+            "pos": [
+                420,
+                -270
+            ]
+        },
+        {
+            "code": "W.MSCIDS_MPM03",
+            "name": "Applied Machine Learning and\nPredictive Modelling 2",
+            "ects": 3,
+            "semester": 2,
+            "group": "RM",
+            "form": "RC",
+            "reqs": [
+                "W.MSCIDS_MPM02"
+            ],
+            "topics": [
+                "02.11",
+                "02.12",
+                "02.13",
+                "02.14",
+                "02.15"
+            ],
+            "pos": [
+                420,
+                -30
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DDB01",
+            "name": "Data-Driven Business Models",
+            "ects": 3,
+            "semester": 1,
+            "group": "GCEM",
+            "form": "RC",
+            "reqs": [],
+            "topics": [
+                "19.01",
+                "19.02",
+                "19.03",
+                "19.04"
+            ],
+            "pos": [
+                420,
+                740
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DDP01",
+            "name": "Designing and Managing Data Projects",
+            "ects": 3,
+            "semester": 1,
+            "group": "GCEM",
+            "form": "RC",
+            "reqs": [],
+            "topics": [
+                "23.01",
+                "23.02",
+                "23.03",
+                "13.01",
+                "13.02",
+                "13.03",
+                "13.04",
+                "13.05",
+                "13.06",
+                "13.08",
+                "13.09",
+                "13.10",
+                "13.11"
+            ],
+            "pos": [
+                90,
+                800
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DI01",
+            "name": "Data Ideation",
+            "ects": 3,
+            "semester": 1,
+            "group": "GCEM",
+            "form": "BS",
+            "reqs": [],
+            "topics": [
+                "13.01",
+                "13.02",
+                "13.03",
+                "13.04",
+                "13.05"
+            ],
+            "pos": [
+                90,
+                710
+            ]
+        },
+        {
+            "code": "W.MSCIDS_LIA01",
+            "name": "Linear Algebra 1",
+            "ects": 3,
+            "semester": 1,
+            "group": "RM",
+            "form": "RC",
+            "reqs": [],
+            "topics": [
+                "30.01",
+                "30.06"
+            ],
+            "pos": [
+                90,
+                220
+            ]
+        },
+        {
+            "code": "W.MSCIDS_LIA02",
+            "name": "Linear Algebra 2",
+            "ects": 3,
+            "semester": 1,
+            "group": "GCEM",
+            "form": "RC",
+            "reqs": [
+                "W.MSCIDS_LIA01"
+            ],
+            "topics": [
+                "30.02",
+                "30.03",
+                "30.04",
+                "30.05"
+            ],
+            "pos": [
+                90,
+                530
+            ]
+        },
+        {
+            "code": "W.MSCIDS_RB01",
+            "name": "R-Bootcamp",
+            "ects": 3,
+            "semester": 1,
+            "group": "GCEM",
+            "form": "BS",
+            "reqs": [],
+            "topics": [
+                "06.03",
+                "06.04",
+                "06.05",
+                "06.06",
+                "06.07",
+                "06.08",
+                "06.09",
+                "12.12"
+            ],
+            "pos": [
+                90,
+                620
+            ]
+        },
+        {
+            "code": "W.MSCIDS_HCD02",
+            "name": "Human Centered Design",
+            "ects": 3,
+            "semester": 2,
+            "group": "GCEM",
+            "form": "RC",
+            "reqs": [],
+            "topics": [
+                "13.08",
+                "13.09",
+                "13.10",
+                "13.11"
+            ],
+            "pos": [
+                420,
+                660
+            ]
+        },
+        {
+            "code": "W.MSCIDS_MDE02",
+            "name": "Management of Digital Enterprise",
+            "ects": 3,
+            "semester": 2,
+            "group": "GCEM",
+            "form": "RC",
+            "reqs": [],
+            "topics": [
+                "31.01",
+                "31.02",
+                "31.03",
+                "31.04",
+                "31.05",
+                "31.06",
+                "31.07",
+                "31.08",
+                "31.09",
+                "31.11",
+                "31.12",
+                "31.13",
+                "31.14",
+                "31.15",
+                "31.16",
+                "31.17",
+                "31.18",
+                "31.19",
+                "31.21",
+                "31.22",
+                "31.23",
+                "31.24",
+                "31.25",
+                "31.26",
+                "31.27",
+                "31.28",
+                "31.29"
+            ],
+            "pos": [
+                420,
+                830
+            ]
+        },
+        {
+            "code": "W.MSCIDS_CW03",
+            "name": "Scientific Writing and\nPresentation Skills",
+            "ects": 3,
+            "semester": 3,
+            "group": "GCEM",
+            "form": "RC",
+            "reqs": [],
+            "topics": [
+                "35.01",
+                "35.02",
+                "35.03",
+                "35.04",
+                "35.05"
+            ],
+            "pos": [
+                750,
+                800
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DVN03",
+            "name": "Data Visualisation and Narration",
+            "ects": 3,
+            "semester": 3,
+            "group": "GCEM",
+            "form": "RC",
+            "reqs": [],
+            "topics": [
+                "16.01",
+                "16.02",
+                "16.03",
+                "16.04",
+                "16.05",
+                "16.06",
+                "35.06",
+                "13.03",
+                "13.11"
+            ],
+            "pos": [
+                750,
+                740
+            ]
+        },
+        {
+            "code": "W.MSCIDS_EBD03",
+            "name": "Ethical Issues of Big Data",
+            "ects": 3,
+            "semester": 3,
+            "group": "GCEM",
+            "form": "RC",
+            "reqs": [],
+            "topics": [
+                "25.01",
+                "25.02",
+                "25.03",
+                "25.04",
+                "25.05"
+            ],
+            "pos": [
+                750,
+                920
+            ]
+        },
+        {
+            "code": "W.MSCIDS_LBD03",
+            "name": "Legal Issues of Big Data",
+            "ects": 3,
+            "semester": 3,
+            "group": "GCEM",
+            "form": "RC",
+            "reqs": [],
+            "topics": [
+                "29.01",
+                "29.02"
+            ],
+            "pos": [
+                750,
+                860
+            ]
+        },
+        {
+            "code": "W.MSCIDS_NET02",
+            "name": "Collaborative Innovation Networks",
+            "ects": 3,
+            "semester": 3,
+            "group": "GCEM",
+            "form": "RC",
+            "reqs": [
+                "W.MSCIDS_MPM02",
+                "W.MSCIDS_CIP02"
+            ],
+            "topics": [
+                "01.09",
+                "01.10",
+                "01.11",
+                "01.12",
+                "01.13",
+                "20.13",
+                "20.14"
+            ],
+            "pos": [
+                750,
+                680
+            ]
+        },
+        {
+            "code": "W.MSCIDS_WDS02",
+            "name": "Web and Data Scraping with R",
+            "ects": 3,
+            "semester": 3,
+            "group": "GCEM",
+            "form": "BS",
+            "reqs": [
+                "W.MSCIDS_MPM02",
+                "W.MSCIDS_RB01"
+            ],
+            "topics": [
+                "12.12",
+                "12.07",
+                "17.08",
+                "18.03",
+                "03.07",
+                "11.03",
+                "11.04",
+                "11.05",
+                "12.13"
+            ],
+            "pos": [
+                750,
+                620
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DL04",
+            "name": "Digital Leadership",
+            "ects": 3,
+            "semester": 4,
+            "group": "GCEM",
+            "form": "RC_BS",
+            "reqs": [],
+            "topics": [
+                "24.01",
+                "24.02",
+                "24.03",
+                "24.04",
+                "24.05"
+            ],
+            "pos": [
+                1080,
+                -200
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DIT04",
+            "name": "Interview Training for\nData Scientists",
+            "ects": 3,
+            "semester": 4,
+            "group": "GCEM",
+            "form": "BS",
+            "reqs": [],
+            "topics": [
+                "28.01",
+                "28.02",
+                "28.03",
+                "28.04"
+            ],
+            "pos": [
+                1080,
+                -270
+            ]
+        },
+        {
+            "code": "W.MSCIDS_AMS03",
+            "name": "Analysis and Modelling of\nSocial Interactions",
+            "ects": 3,
+            "semester": 3,
+            "group": "CEM AAE",
+            "form": "RC",
+            "reqs": [],
+            "topics": [
+                "01.01",
+                "01.02",
+                "01.03",
+                "01.04",
+                "01.05",
+                "01.06",
+                "01.07",
+                "01.08"
+            ],
+            "pos": [
+                750,
+                500
+            ]
+        },
+        {
+            "code": "W.MSCIDS_BDL03_1",
+            "name": "NoSQL Lab with\nPython & MongoDB",
+            "ects": 3,
+            "semester": 3,
+            "group": "CEM AAE",
+            "form": "RC",
+            "reqs": [
+                "W.MSCIDS_DBM02",
+                "W.MSCIDS_CIP02"
+            ],
+            "topics": [
+                "32.01",
+                "03.09",
+                "17.07",
+                "17.08",
+                "17.09",
+                "17.10",
+                "17.11"
+            ],
+            "pos": [
+                750,
+                140
+            ]
+        },
+        {
+            "code": "W.MSCIDS_BDL03_2",
+            "name": "Big Data in the Cloud",
+            "ects": 3,
+            "semester": 3,
+            "group": "CEM AAE",
+            "form": "BS",
+            "reqs": [
+                "W.MSCIDS_DBM02",
+                "W.MSCIDS_CIP02"
+            ],
+            "topics": [
+                "03.01",
+                "03.02",
+                "04.01",
+                "04.02",
+                "04.03"
+            ],
+            "pos": [
+                750,
+                80
+            ]
+        },
+        {
+            "code": "W.MSCIDS_CTA03",
+            "name": "Computational Language\nTechnologies",
+            "ects": 3,
+            "semester": 3,
+            "group": "CEM AAE",
+            "form": "RC",
+            "reqs": [
+                "W.MSCIDS_MPM02",
+                "W.MSCIDS_CIP02"
+            ],
+            "topics": [
+                "08.01",
+                "08.02",
+                "08.03",
+                "08.04",
+                "08.05",
+                "08.06",
+                "08.07",
+                "08.08"
+            ],
+            "pos": [
+                750,
+                20
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DLB03",
+            "name": "Deep Learning",
+            "ects": 3,
+            "semester": 3,
+            "group": "CEM AAE",
+            "form": "BS",
+            "reqs": [
+                "W.MSCIDS_MPM02",
+                "W.MSCIDS_MPM03"
+            ],
+            "topics": [
+                "20.01",
+                "20.02",
+                "20.04",
+                "20.06",
+                "20.07",
+                "20.08",
+                "20.09",
+                "20.10",
+                "20.11",
+                "20.12"
+            ],
+            "pos": [
+                750,
+                -270
+            ]
+        },
+        {
+            "code": "W.MSCIDS_CVI03",
+            "name": "Computer Vision",
+            "ects": 3,
+            "semester": 3,
+            "group": "CEM AAE",
+            "form": "RC",
+            "reqs": [
+                "W.MSCIDS_DLB03"
+            ],
+            "topics": [
+                "20.01",
+                "20.02",
+                "20.03",
+                "20.04",
+                "20.06",
+                "20.07"
+            ],
+            "pos": [
+                750,
+                -160
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DWL03",
+            "name": "Data Warehousing and\nData Lake Systems",
+            "ects": 6,
+            "semester": 3,
+            "group": "CEM AAE",
+            "form": "RC",
+            "reqs": [
+                "W.MSCIDS_DBM02"
+            ],
+            "topics": [
+                "03.01",
+                "03.02",
+                "03.02",
+                "03.03",
+                "03.04",
+                "03.05",
+                "03.06",
+                "03.07",
+                "12.01",
+                "12.03",
+                "12.04",
+                "12.06",
+                "12.07",
+                "12.13",
+                "14.03",
+                "14.06",
+                "17.01",
+                "17.02",
+                "17.03",
+                "17.04",
+                "17.05",
+                "17.13",
+                "17.14"
+            ],
+            "pos": [
+                750,
+                260
+            ]
+        },
+        {
+            "code": "W.MSCIDS_ETL03",
+            "name": "Modern Data Engineering",
+            "ects": 3,
+            "semester": 3,
+            "group": "CEM AAE",
+            "form": "BS",
+            "reqs": [
+                "W.MSCIDS_DBM02",
+                "W.MSCIDS_CIP02"
+            ],
+            "topics": [
+                "12.06",
+                "03.08",
+                "03.02",
+                "04.04",
+                "12.08",
+                "12.09",
+                "12.10",
+                "12.11",
+                "12.12",
+                "12.13",
+                "03.06",
+                "17.15",
+                "17.16",
+                "17.08",
+                "04.01"
+            ],
+            "pos": [
+                750,
+                200
+            ]
+        },
+        {
+            "code": "W.MSCIDS_PRA03",
+            "name": "Pattern Recognition in\nAudio-Signals",
+            "ects": 3,
+            "semester": 3,
+            "group": "CEM AAE",
+            "form": "RC",
+            "reqs": [
+                "W.MSCIDS_MPM02",
+                "W.MSCIDS_CIP02"
+            ],
+            "topics": [
+                "33.01",
+                "33.02",
+                "33.03",
+                "33.04",
+                "33.05",
+                "33.06"
+            ],
+            "pos": [
+                750,
+                -100
+            ]
+        },
+        {
+            "code": "W.MSCIDS_REC03",
+            "name": "Recommender Systems",
+            "ects": 3,
+            "semester": 3,
+            "group": "CEM AAE",
+            "form": "BS",
+            "reqs": [
+                "W.MSCIDS_MPM02",
+                "W.MSCIDS_CIP02"
+            ],
+            "topics": [
+                "34.01",
+                "34.02",
+                "34.03",
+                "34.04",
+                "34.05",
+                "34.06"
+            ],
+            "pos": [
+                750,
+                -40
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DE_CRA01",
+            "name": "Customer Data Analytics",
+            "ects": 3,
+            "semester": "open",
+            "group": "CEM DE",
+            "form": "RC",
+            "reqs": [],
+            "topics": [
+                "09.01",
+                "09.02",
+                "09.03"
+            ],
+            "pos": [
+                800,
+                -450
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DE_DAE01",
+            "name": "Data Analytics for Energy Systems\nand IoT",
+            "ects": 3,
+            "semester": "open",
+            "group": "CEM DE",
+            "form": "RC",
+            "reqs": [],
+            "topics": [
+                "10.01",
+                "10.02",
+                "40.01",
+                "40.02",
+                "40.03",
+                "40.04",
+                "40.05",
+                "40.06"
+            ],
+            "pos": [
+                380,
+                -450
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DE_FRD01",
+            "name": "Fraud Detection",
+            "ects": 3,
+            "semester": "open",
+            "group": "CEM DE",
+            "form": "RC",
+            "reqs": [],
+            "topics": [
+                "26.01",
+                "26.02",
+                "26.03",
+                "26.04",
+                "26.05"
+            ],
+            "pos": [
+                380,
+                -520
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DE_GD01",
+            "name": "Geospatial Data Analysis for\nSmart Communities",
+            "ects": 3,
+            "semester": "open",
+            "group": "CEM DE",
+            "form": "RC",
+            "reqs": [],
+            "topics": [
+                "27.01",
+                "27.02",
+                "27.03",
+                "27.04",
+                "27.05",
+                "27.06"
+            ],
+            "pos": [
+                1010,
+                -520
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DE_HEA01",
+            "name": "Data Science in Healthcare",
+            "ects": 3,
+            "semester": "open",
+            "group": "CEM DE",
+            "form": "RC",
+            "reqs": [
+                "W.MSCIDS_SA01"
+            ],
+            "topics": [
+                "10.03",
+                "15.01",
+                "15.02",
+                "06.10",
+                "32.12"
+            ],
+            "pos": [
+                590,
+                -450
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DE_NER01",
+            "name": "Natural Experiments Using R",
+            "ects": 3,
+            "semester": "open",
+            "group": "CEM DE",
+            "form": "BS",
+            "reqs": [],
+            "topics": [
+                "05.14",
+                "05.15",
+                "05.16",
+                "05.17",
+                "05.18",
+                "06.02",
+                "05.05",
+                "05.08"
+            ],
+            "pos": [
+                170,
+                -450
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DE_ODS01",
+            "name": "Tourism and Open Destination\nData Space",
+            "ects": 3,
+            "semester": "open",
+            "group": "CEM DE",
+            "form": "RC",
+            "reqs": [],
+            "topics": [
+                "10.07",
+                "17.04",
+                "27.07",
+                "39.01",
+                "39.02",
+                "39.03"
+            ],
+            "pos": [
+                590,
+                -520
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DE_SDA01",
+            "name": "Sport Data Analytics",
+            "ects": 3,
+            "semester": "open",
+            "group": "CEM DE",
+            "form": "BS",
+            "reqs": [],
+            "topics": [
+                "10.04",
+                "36.01",
+                "36.02",
+                "36.03",
+                "36.04"
+            ],
+            "pos": [
+                170,
+                -520
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DE_SUA01",
+            "name": "Sustainability Analytics",
+            "ects": 3,
+            "semester": "open",
+            "group": "CEM DE",
+            "form": "BS",
+            "reqs": [],
+            "topics": [
+                "10.05",
+                "37.01",
+                "37.02",
+                "37.03",
+                "37.04",
+                "37.05",
+                "37.06",
+                "37.07",
+                "37.08",
+                "37.09",
+                "10.07",
+                "10.08",
+                "10.09",
+                "15.02",
+                "15.03"
+            ],
+            "pos": [
+                1010,
+                -450
+            ]
+        },
+        {
+            "code": "W.MSCIDS_DE_TSA01",
+            "name": "Time Series Analysis in Finance",
+            "ects": 3,
+            "semester": "open",
+            "group": "CEM DE",
+            "form": "RC",
+            "reqs": [],
+            "topics": [
+                "10.06",
+                "38.01",
+                "38.02",
+                "38.03",
+                "38.04",
+                "38.05",
+                "38.06",
+                "38.07",
+                "38.08",
+                "38.09"
+            ],
+            "pos": [
+                800,
+                -520
+            ]
+        },
+        {
+            "code": "W.MSCIDS_LOG01",
+            "name": "Data-driven Supply Chain Management\nund Logistics",
+            "ects": 3,
+            "semester": "open",
+            "group": "CEM DE",
+            "form": "RC",
+            "reqs": [],
+            "topics": [
+                "43.01",
+                "43.02",
+                "43.03",
+                "43.04"
+            ],
+            "pos": [
+                1010,
+                -590
+            ]
+        },
+        {
+            "code": "W.MSCIDS_GOV03",
+            "name": "Data Strategy and Governance",
+            "ects": 3,
+            "semester": 3,
+            "group": "CEM AAE",
+            "form": "BS",
+            "reqs": [
+                "W.MSCIDS_DBM02"
+            ],
+            "topics": [
+                "44.01",
+                "44.02",
+                "44.03",
+                "44.04"
+            ],
+            "pos": [
+                750,
+                360
+            ]
+        },
+        {
+            "code": "W.MSCIDS_HVD03",
+            "name": "Hands-on Visualisation for\nData Science",
+            "ects": 3,
+            "semester": 3,
+            "group": "CEM AAE",
+            "form": "BS",
+            "reqs": [
+                "W.MSCIDS_DBM02",
+                "W.MSCIDS_PDS01"
+            ],
+            "topics": [
+                "16.07",
+                "16.08",
+                "16.09",
+                "16.10",
+                "16.11",
+                "17.04"
+            ],
+            "pos": [
+                750,
+                430
+            ]
+        }
+    ],
+    "topics": [
+        {
+            "id": "01",
+            "name": "Social Network Analysis",
+            "pos": [
+                1604.7646385149428,
+                674.7480475027128
+            ]
+        },
+        {
+            "id": "01.01",
+            "name": "Social Complexity",
+            "pos": [
+                1512.4204847368574,
+                611.1783703132584
+            ]
+        },
+        {
+            "id": "01.02",
+            "name": "Social Network Data",
+            "pos": [
+                1470.772863194856,
+                657.4297924808623
+            ]
+        },
+        {
+            "id": "01.03",
+            "name": "Network Structures",
+            "pos": [
+                1618.633421294302,
+                616.3024268338166
+            ]
+        },
+        {
+            "id": "01.04",
+            "name": "Network Metrics",
+            "pos": [
+                1483.640701285298,
+                686.720245488465
+            ]
+        },
+        {
+            "id": "01.05",
+            "name": "Network Visualizations",
+            "pos": [
+                1507.662293728676,
+                708.4358506723444
+            ]
+        },
+        {
+            "id": "01.06",
+            "name": "Clusters, Cliques, and Communities",
+            "pos": [
+                1583.3433251778006,
+                589.3423590506935
+            ]
+        },
+        {
+            "id": "01.07",
+            "name": "Static & Time-evolving Networks",
+            "pos": [
+                1540.235045480676,
+                737.2193230532666
+            ]
+        },
+        {
+            "id": "01.08",
+            "name": "Contagion & Infection",
+            "pos": [
+                1483.023231251928,
+                635.43262574294
+            ]
+        },
+        {
+            "id": "01.09",
+            "name": "Human Dynamics",
+            "pos": [
+                1727.6996150991492,
+                630.0232186538673
+            ]
+        },
+        {
+            "id": "01.10",
+            "name": "Collaborative Innovation Networks",
+            "pos": [
+                1701.5122110255058,
+                709.5902176994172
+            ]
+        },
+        {
+            "id": "01.11",
+            "name": "Sentiment Analysis",
+            "pos": [
+                1713.4826645536127,
+                731.1411130259502
+            ]
+        },
+        {
+            "id": "01.12",
+            "name": "Coolhunting",
+            "pos": [
+                1639.617457996017,
+                648.2116822535457
+            ]
+        },
+        {
+            "id": "01.13",
+            "name": "Coolfarming",
+            "pos": [
+                1742.1487268488277,
+                649.0213184416922
+            ]
+        },
+        {
+            "id": "02",
+            "name": "Machine Learning",
+            "pos": [
+                1443.6635376679294,
+                -458.1877941127359
+            ]
+        },
+        {
+            "id": "02.01",
+            "name": "Linear Regression",
+            "pos": [
+                1354.2187022202472,
+                -404.8851648814373
+            ]
+        },
+        {
+            "id": "02.02",
+            "name": "Generalised Linear Models",
+            "pos": [
+                1506.6265741252973,
+                -435.01989495048934
+            ]
+        },
+        {
+            "id": "02.03",
+            "name": "Generalised Additive Models",
+            "pos": [
+                1466.4528468645672,
+                -390.3352840499983
+            ]
+        },
+        {
+            "id": "02.04",
+            "name": "Support Vector Machines",
+            "pos": [
+                1285.6852297534044,
+                -368.0538296361475
+            ]
+        },
+        {
+            "id": "02.05",
+            "name": "Neural Networks",
+            "pos": [
+                1441.0188586083134,
+                -368.784374075865
+            ]
+        },
+        {
+            "id": "02.06",
+            "name": "Agent-based Modelling",
+            "pos": [
+                1414.468418153309,
+                -421.6516623824709
+            ]
+        },
+        {
+            "id": "02.07",
+            "name": "Approximate Bayesian Computation",
+            "pos": [
+                1479.997006850841,
+                -408.57678394279264
+            ]
+        },
+        {
+            "id": "02.08",
+            "name": "Model Validation",
+            "pos": [
+                1358.1992527099494,
+                -387.48535070872754
+            ]
+        },
+        {
+            "id": "02.11",
+            "name": "Dimensionality reduction",
+            "pos": [
+                1357.025186327422,
+                -503.5859676175789
+            ]
+        },
+        {
+            "id": "02.12",
+            "name": "Multi-dimensional Scaling (MDS)",
+            "pos": [
+                1263.6220722108403,
+                -435.2025017936187
+            ]
+        },
+        {
+            "id": "02.13",
+            "name": "Clustering",
+            "pos": [
+                1349.2973987244695,
+                -480.9006374747655
+            ]
+        },
+        {
+            "id": "02.14",
+            "name": "Classification",
+            "pos": [
+                1411.8604321818518,
+                -488.97966612313604
+            ]
+        },
+        {
+            "id": "02.15",
+            "name": "Trees and ensemble methods",
+            "pos": [
+                1269.4670956267003,
+                -420.8791326637372
+            ]
+        },
+        {
+            "id": "03",
+            "name": "Big Data",
+            "pos": [
+                1305.5384002834194,
+                447.45647898264946
+            ]
+        },
+        {
+            "id": "03.01",
+            "name": "Business Requirements",
+            "pos": [
+                1234.329445443902,
+                430.8123691424655
+            ]
+        },
+        {
+            "id": "03.02",
+            "name": "Data Lake Systems",
+            "pos": [
+                1284.5733886254714,
+                414.37854136325984
+            ]
+        },
+        {
+            "id": "03.03",
+            "name": "Data Warehouse Systems",
+            "pos": [
+                1266.9092619076764,
+                489.16079618964653
+            ]
+        },
+        {
+            "id": "03.04",
+            "name": "Data Analysis in the Data Lake",
+            "pos": [
+                1334.1358011642458,
+                476.1500645002305
+            ]
+        },
+        {
+            "id": "03.05",
+            "name": "Schema on Read",
+            "pos": [
+                1245.0965973121845,
+                463.1519364053711
+            ]
+        },
+        {
+            "id": "03.06",
+            "name": "Data Pipelines",
+            "pos": [
+                1401.1722967411633,
+                426.2872177178635
+            ]
+        },
+        {
+            "id": "03.07",
+            "name": "Relational Database Services",
+            "pos": [
+                1333.6190851963859,
+                506.30262884121987
+            ]
+        },
+        {
+            "id": "03.08",
+            "name": "Principles",
+            "pos": [
+                1347.1034806926061,
+                399.9041011677796
+            ]
+        },
+        {
+            "id": "03.09",
+            "name": "NoSQL",
+            "pos": [
+                1418.799415088531,
+                458.41403771923905
+            ]
+        },
+        {
+            "id": "04",
+            "name": "Cloud",
+            "pos": [
+                1510.2939932708157,
+                340.92685840117366
+            ]
+        },
+        {
+            "id": "04.01",
+            "name": "Azure Cloud",
+            "pos": [
+                1609.5220954495553,
+                331.9958488268202
+            ]
+        },
+        {
+            "id": "04.02",
+            "name": "Data Factory",
+            "pos": [
+                1560.9149493423604,
+                358.10204621161915
+            ]
+        },
+        {
+            "id": "04.03",
+            "name": "Databricks",
+            "pos": [
+                1469.368940583246,
+                364.0929645506838
+            ]
+        },
+        {
+            "id": "04.04",
+            "name": "Cloud Computing",
+            "pos": [
+                1416.1777722801671,
+                327.476868885328
+            ]
+        },
+        {
+            "id": "04.05",
+            "name": "Medium concepts",
+            "pos": [
+                1545.204010359767,
+                313.23287099215617
+            ]
+        },
+        {
+            "id": "04.06",
+            "name": "Base concepts",
+            "pos": [
+                1460.1304905371273,
+                308.0036606535354
+            ]
+        },
+        {
+            "id": "05",
+            "name": "Statistics",
+            "pos": [
+                -310.75124368678087,
+                -463.2499469840407
+            ]
+        },
+        {
+            "id": "05.01",
+            "name": "Exploratory data analysis",
+            "pos": [
+                -448.0171258388764,
+                -363.88902280261686
+            ]
+        },
+        {
+            "id": "05.02",
+            "name": "Introduction to probability theory",
+            "pos": [
+                -425.29803283185277,
+                -442.0197586916256
+            ]
+        },
+        {
+            "id": "05.03",
+            "name": "Probability distributions",
+            "pos": [
+                -325.60321072182546,
+                -368.9031767060861
+            ]
+        },
+        {
+            "id": "05.04",
+            "name": "Hypothesis testing",
+            "pos": [
+                -448.11074335300475,
+                -389.68475141663544
+            ]
+        },
+        {
+            "id": "05.05",
+            "name": "Regression models",
+            "pos": [
+                -462.86105822231707,
+                -414.4248308966279
+            ]
+        },
+        {
+            "id": "05.06",
+            "name": "Discrete Response",
+            "pos": [
+                -204.65658657533592,
+                -421.58778626813853
+            ]
+        },
+        {
+            "id": "05.07",
+            "name": "Time Series",
+            "pos": [
+                -225.01332955470028,
+                -399.06821817653116
+            ]
+        },
+        {
+            "id": "05.08",
+            "name": "Panel Data",
+            "pos": [
+                -301.5841838394368,
+                -385.34565106507574
+            ]
+        },
+        {
+            "id": "05.10",
+            "name": "Quantitative description",
+            "pos": [
+                -162.6880128252308,
+                -499.4659237802095
+            ]
+        },
+        {
+            "id": "05.11",
+            "name": "Modeling",
+            "pos": [
+                -214.86334023300827,
+                -447.3230480716908
+            ]
+        },
+        {
+            "id": "05.12",
+            "name": "Forecasting",
+            "pos": [
+                -303.6592648819614,
+                -505.55172640486126
+            ]
+        },
+        {
+            "id": "05.14",
+            "name": "Natural Experiments",
+            "pos": [
+                -72.53260267162793,
+                -476.511913178721
+            ]
+        },
+        {
+            "id": "05.15",
+            "name": "Matching",
+            "pos": [
+                -310.476209061962,
+                -550.476942356041
+            ]
+        },
+        {
+            "id": "05.16",
+            "name": "Instrumental Variables",
+            "pos": [
+                -162.611498667323,
+                -543.953276945433
+            ]
+        },
+        {
+            "id": "05.17",
+            "name": "Difference-in-Differences",
+            "pos": [
+                -241.4922215686534,
+                -619.3101268285346
+            ]
+        },
+        {
+            "id": "05.18",
+            "name": "Regression Discontinuity Design",
+            "pos": [
+                -188.05263720217866,
+                -576.7739173583435
+            ]
+        },
+        {
+            "id": "06",
+            "name": "R",
+            "pos": [
+                -324.9458882083618,
+                446.20538922123507
+            ]
+        },
+        {
+            "id": "06.01",
+            "name": "Introduction",
+            "pos": [
+                -205.5878037817612,
+                464.41405648042763
+            ]
+        },
+        {
+            "id": "06.02",
+            "name": "Natural Experiments",
+            "pos": [
+                -194.7371185022331,
+                406.81197273432394
+            ]
+        },
+        {
+            "id": "06.03",
+            "name": "Basic objects",
+            "pos": [
+                -365.72635645364164,
+                477.00830158670095
+            ]
+        },
+        {
+            "id": "06.04",
+            "name": "Simple computations",
+            "pos": [
+                -358.71462070337986,
+                429.7149025794635
+            ]
+        },
+        {
+            "id": "06.05",
+            "name": "Basic Graphs",
+            "pos": [
+                -235.7863931224547,
+                438.26166106602665
+            ]
+        },
+        {
+            "id": "06.06",
+            "name": "Missing values and writing functions",
+            "pos": [
+                -285.3258077324075,
+                507.4362306700007
+            ]
+        },
+        {
+            "id": "06.07",
+            "name": "Control structures",
+            "pos": [
+                -323.49712121727737,
+                534.840055812084
+            ]
+        },
+        {
+            "id": "06.08",
+            "name": "add-on packages",
+            "pos": [
+                -275.7581711291275,
+                375.15689874295856
+            ]
+        },
+        {
+            "id": "06.09",
+            "name": "Dynamics documents",
+            "pos": [
+                -342.72197895528524,
+                393.1529674722829
+            ]
+        },
+        {
+            "id": "06.10",
+            "name": "R for data projects",
+            "pos": [
+                -187.06663464748615,
+                499.2903086398555
+            ]
+        },
+        {
+            "id": "08",
+            "name": "Natural Language Processing (NLP)",
+            "pos": [
+                1631.2209699416308,
+                135.02709810855055
+            ]
+        },
+        {
+            "id": "08.01",
+            "name": "Linguistic Concepts",
+            "pos": [
+                1514.2128503521194,
+                96.74648008018161
+            ]
+        },
+        {
+            "id": "08.02",
+            "name": "Text Processing",
+            "pos": [
+                1553.303144410009,
+                158.5429443324811
+            ]
+        },
+        {
+            "id": "08.03",
+            "name": "Exploratory Text Analysis",
+            "pos": [
+                1609.3932226251509,
+                111.83637455601749
+            ]
+        },
+        {
+            "id": "08.04",
+            "name": "Representation learning",
+            "pos": [
+                1627.75204208468,
+                181.47075075534445
+            ]
+        },
+        {
+            "id": "08.05",
+            "name": "Similarity & Classification",
+            "pos": [
+                1609.2438406441904,
+                87.56341811731149
+            ]
+        },
+        {
+            "id": "08.06",
+            "name": "Deep Learning",
+            "pos": [
+                1486.124689349912,
+                141.49594339608785
+            ]
+        },
+        {
+            "id": "08.07",
+            "name": "Explain ML models",
+            "pos": [
+                1469.3354384578272,
+                114.5112476940524
+            ]
+        },
+        {
+            "id": "08.08",
+            "name": "Productionizing ML models",
+            "pos": [
+                1469.4475156343692,
+                130.51816156943377
+            ]
+        },
+        {
+            "id": "09",
+            "name": "Customer Analytics",
+            "pos": [
+                781.557517920855,
+                -683.9594230335323
+            ]
+        },
+        {
+            "id": "09.01",
+            "name": "Customer Experiences",
+            "pos": [
+                734.5875134082142,
+                -647.9321408619626
+            ]
+        },
+        {
+            "id": "09.02",
+            "name": "Customer Journey",
+            "pos": [
+                814.9902383977471,
+                -661.5326448539604
+            ]
+        },
+        {
+            "id": "09.03",
+            "name": "Customer Relationship Management",
+            "pos": [
+                771.0327095572663,
+                -624.7843960662802
+            ]
+        },
+        {
+            "id": "10",
+            "name": "Business Domains",
+            "pos": [
+                783.7537978336911,
+                -889.547632975097
+            ]
+        },
+        {
+            "id": "10.01",
+            "name": "Energy Systems",
+            "pos": [
+                746.430276186666,
+                -936.4813828615194
+            ]
+        },
+        {
+            "id": "10.02",
+            "name": "IoT",
+            "pos": [
+                716.7230767494352,
+                -852.5288953425012
+            ]
+        },
+        {
+            "id": "10.03",
+            "name": "Healthcare",
+            "pos": [
+                746.8937760311492,
+                -816.6081765276541
+            ]
+        },
+        {
+            "id": "10.04",
+            "name": "Sports",
+            "pos": [
+                668.9229905615946,
+                -896.693980600348
+            ]
+        },
+        {
+            "id": "10.05",
+            "name": "Sustainability",
+            "pos": [
+                866.6130392677874,
+                -862.4765101742913
+            ]
+        },
+        {
+            "id": "10.06",
+            "name": "Finance",
+            "pos": [
+                780.5235134534715,
+                -843.0933416040881
+            ]
+        },
+        {
+            "id": "10.07",
+            "name": "Tourism",
+            "pos": [
+                845.9123423203108,
+                -836.081871646617
+            ]
+        },
+        {
+            "id": "10.08",
+            "name": "Agriculture",
+            "pos": [
+                864.1140685260849,
+                -925.3884445070642
+            ]
+        },
+        {
+            "id": "10.09",
+            "name": "Infrastructure",
+            "pos": [
+                944.6217036670084,
+                -913.8854568432246
+            ]
+        },
+        {
+            "id": "11",
+            "name": "Software Engineering",
+            "pos": [
+                -329.07214873550606,
+                41.100156746376214
+            ]
+        },
+        {
+            "id": "11.01",
+            "name": "Computer systems and networks",
+            "pos": [
+                -365.6570721999361,
+                69.33391241813628
+            ]
+        },
+        {
+            "id": "11.02",
+            "name": "Software Development",
+            "pos": [
+                -303.75291693611564,
+                95.43108738309748
+            ]
+        },
+        {
+            "id": "11.03",
+            "name": "Data modeling and processing",
+            "pos": [
+                -172.9395075704912,
+                38.075443500137425
+            ]
+        },
+        {
+            "id": "11.04",
+            "name": "Parallel code",
+            "pos": [
+                -291.94329773547616,
+                9.762221440213445
+            ]
+        },
+        {
+            "id": "11.05",
+            "name": "Proxies",
+            "pos": [
+                -279.18817229938617,
+                77.40829394107618
+            ]
+        },
+        {
+            "id": "12",
+            "name": "Data Engineering",
+            "pos": [
+                1316.997806048145,
+                193.98978668722697
+            ]
+        },
+        {
+            "id": "12.01",
+            "name": "Data Collection",
+            "pos": [
+                1219.4798364022352,
+                183.2454056746067
+            ]
+        },
+        {
+            "id": "12.02",
+            "name": "Data Integration",
+            "pos": [
+                1242.8941285845951,
+                216.3509629703668
+            ]
+        },
+        {
+            "id": "12.03",
+            "name": "Data Preprocessing",
+            "pos": [
+                1205.857465141468,
+                167.50571336348537
+            ]
+        },
+        {
+            "id": "12.04",
+            "name": "Manipulate Data Structures",
+            "pos": [
+                1314.5895740476155,
+                162.91681069138744
+            ]
+        },
+        {
+            "id": "12.05",
+            "name": "Basics of Data Aquisition",
+            "pos": [
+                1371.938355891306,
+                178.6527450070284
+            ]
+        },
+        {
+            "id": "12.06",
+            "name": "ETL Process",
+            "pos": [
+                1387.5095365468544,
+                232.24200207511782
+            ]
+        },
+        {
+            "id": "12.07",
+            "name": "REST APIs",
+            "pos": [
+                1231.2993982382377,
+                271.65203449512614
+            ]
+        },
+        {
+            "id": "12.08",
+            "name": "Real time Streaming",
+            "pos": [
+                1182.0630594785912,
+                233.7838896676151
+            ]
+        },
+        {
+            "id": "12.09",
+            "name": "Real time ELT Architectures",
+            "pos": [
+                1327.7846538046472,
+                247.34302616024945
+            ]
+        },
+        {
+            "id": "12.10",
+            "name": "Data Streams",
+            "pos": [
+                1162.5881130204766,
+                222.5699564127588
+            ]
+        },
+        {
+            "id": "12.11",
+            "name": "Robotic Process Automation",
+            "pos": [
+                1171.1534952454383,
+                257.83019843462506
+            ]
+        },
+        {
+            "id": "12.12",
+            "name": "Web Data Scraping",
+            "pos": [
+                1161.1045838001194,
+                201.92245517259883
+            ]
+        },
+        {
+            "id": "12.13",
+            "name": "Feature Extraction",
+            "pos": [
+                1340.1957400900765,
+                216.91266287749573
+            ]
+        },
+        {
+            "id": "13",
+            "name": "Human Centered Design",
+            "pos": [
+                -279.9216019294124,
+                678.3138507618868
+            ]
+        },
+        {
+            "id": "13.01",
+            "name": "Big Data / Analytics",
+            "pos": [
+                -143.33317083074994,
+                662.003189914821
+            ]
+        },
+        {
+            "id": "13.02",
+            "name": "Hybrid model",
+            "pos": [
+                -149.59187266863836,
+                690.0985383963476
+            ]
+        },
+        {
+            "id": "13.03",
+            "name": "Communicating the results",
+            "pos": [
+                -192.33427145401117,
+                782.447111120307
+            ]
+        },
+        {
+            "id": "13.04",
+            "name": "Independent work",
+            "pos": [
+                -324.8659008939132,
+                618.9713084023153
+            ]
+        },
+        {
+            "id": "13.05",
+            "name": "Reflection",
+            "pos": [
+                -119.19042335855423,
+                631.4440198081332
+            ]
+        },
+        {
+            "id": "13.06",
+            "name": "System Thinking",
+            "pos": [
+                -237.33895679391452,
+                598.2779998364084
+            ]
+        },
+        {
+            "id": "13.08",
+            "name": "Relevance of HCD",
+            "pos": [
+                -172.51464884760674,
+                618.4224723568141
+            ]
+        },
+        {
+            "id": "13.09",
+            "name": "Mindset, concepts, processes",
+            "pos": [
+                -219.2801624638633,
+                712.9460168354127
+            ]
+        },
+        {
+            "id": "13.10",
+            "name": "Trends and criticism",
+            "pos": [
+                -278.29990109687014,
+                739.5337030156187
+            ]
+        },
+        {
+            "id": "13.11",
+            "name": "Tools",
+            "pos": [
+                -243.6001729952729,
+                760.5910468134892
+            ]
+        },
+        {
+            "id": "14",
+            "name": "Data Quality",
+            "pos": [
+                572.0890464584654,
+                1154.7113911611125
+            ]
+        },
+        {
+            "id": "14.01",
+            "name": "Principles",
+            "pos": [
+                615.1922178796939,
+                1115.4681426388815
+            ]
+        },
+        {
+            "id": "14.02",
+            "name": "Dimensions",
+            "pos": [
+                624.6514314494702,
+                1131.1834394777404
+            ]
+        },
+        {
+            "id": "14.03",
+            "name": "Detecting Problems",
+            "pos": [
+                526.7488716961934,
+                1122.8791835024128
+            ]
+        },
+        {
+            "id": "14.04",
+            "name": "Model-Driven Development",
+            "pos": [
+                559.9851965484165,
+                1107.6069090228445
+            ]
+        },
+        {
+            "id": "14.05",
+            "name": "Big Data",
+            "pos": [
+                585.0750397763785,
+                1089.4359761007165
+            ]
+        },
+        {
+            "id": "14.06",
+            "name": "Data imputation",
+            "pos": [
+                620.7272143824943,
+                1175.7562296778783
+            ]
+        },
+        {
+            "id": "15",
+            "name": "Data Science Profession",
+            "pos": [
+                382.5973093982381,
+                -822.1165492052803
+            ]
+        },
+        {
+            "id": "15.01",
+            "name": "Data Science Role",
+            "pos": [
+                401.1357774408044,
+                -841.199316623491
+            ]
+        },
+        {
+            "id": "15.02",
+            "name": "Working with Data",
+            "pos": [
+                377.91691036737,
+                -778.3639598362903
+            ]
+        },
+        {
+            "id": "15.03",
+            "name": "Data sourcing and integration",
+            "pos": [
+                416.42056195650736,
+                -798.3639598362903
+            ]
+        },
+        {
+            "id": "16",
+            "name": "Data Visualisation",
+            "pos": [
+                1297.2250398298884,
+                899.8843219812268
+            ]
+        },
+        {
+            "id": "16.01",
+            "name": "Narration",
+            "pos": [
+                1262.5050545269792,
+                846.3964896782608
+            ]
+        },
+        {
+            "id": "16.02",
+            "name": "Human perception",
+            "pos": [
+                1215.0769280931058,
+                872.9739085315797
+            ]
+        },
+        {
+            "id": "16.03",
+            "name": "Information processing",
+            "pos": [
+                1312.149769598961,
+                871.1856058445642
+            ]
+        },
+        {
+            "id": "16.04",
+            "name": "Data Storytelling",
+            "pos": [
+                1274.12880199392,
+                936.4234883091115
+            ]
+        },
+        {
+            "id": "16.05",
+            "name": "Visual Communication",
+            "pos": [
+                1334.0414459979277,
+                924.2239534636652
+            ]
+        },
+        {
+            "id": "16.06",
+            "name": "User Experience",
+            "pos": [
+                1191.2553435341954,
+                916.2111623275475
+            ]
+        },
+        {
+            "id": "16.07",
+            "name": "Design Principles",
+            "pos": [
+                1411.0883716760611,
+                828.5175382710829
+            ]
+        },
+        {
+            "id": "16.08",
+            "name": "Planning",
+            "pos": [
+                1286.4443540237392,
+                830.9819400363151
+            ]
+        },
+        {
+            "id": "16.09",
+            "name": "Design Phase",
+            "pos": [
+                1493.4618094289003,
+                919.0713626235773
+            ]
+        },
+        {
+            "id": "16.10",
+            "name": "Dasboards in production",
+            "pos": [
+                1456.6105346447355,
+                877.6393929547309
+            ]
+        },
+        {
+            "id": "16.11",
+            "name": "Industry dashboard design",
+            "pos": [
+                1343.3470577345818,
+                847.0460335165211
+            ]
+        },
+        {
+            "id": "17",
+            "name": "Tools",
+            "pos": [
+                1202.4971816304012,
+                694.8069306693164
+            ]
+        },
+        {
+            "id": "17.01",
+            "name": "Amazon Lamda Functions",
+            "pos": [
+                1236.4847659377751,
+                732.6185120512732
+            ]
+        },
+        {
+            "id": "17.02",
+            "name": "Apache Airflow",
+            "pos": [
+                1288.0838797387833,
+                699.9140600399295
+            ]
+        },
+        {
+            "id": "17.03",
+            "name": "AWS Storage Services",
+            "pos": [
+                1213.3169837848666,
+                664.9993960753086
+            ]
+        },
+        {
+            "id": "17.04",
+            "name": "Tableau",
+            "pos": [
+                1141.7940963563367,
+                717.753349396578
+            ]
+        },
+        {
+            "id": "17.05",
+            "name": "AWS S3 Buckets",
+            "pos": [
+                1100.4454581764307,
+                678.6467245718724
+            ]
+        },
+        {
+            "id": "17.07",
+            "name": "MongoDB",
+            "pos": [
+                1183.1044562833583,
+                623.7013986642615
+            ]
+        },
+        {
+            "id": "17.08",
+            "name": "MySQL/MariaDB",
+            "pos": [
+                1223.4847513469006,
+                751.9378602213437
+            ]
+        },
+        {
+            "id": "17.09",
+            "name": "PostgreSQL",
+            "pos": [
+                1192.406939090208,
+                770.29799537394
+            ]
+        },
+        {
+            "id": "17.10",
+            "name": "JupyterNotebook",
+            "pos": [
+                1184.174500758785,
+                649.0149649300696
+            ]
+        },
+        {
+            "id": "17.11",
+            "name": "PyCharm",
+            "pos": [
+                1281.7191208576628,
+                641.4443590948486
+            ]
+        },
+        {
+            "id": "17.12",
+            "name": "Pandas",
+            "pos": [
+                1152.9607254762486,
+                751.9662555885948
+            ]
+        },
+        {
+            "id": "17.13",
+            "name": "AWS RDS",
+            "pos": [
+                1125.0117968271195,
+                635.4813374536969
+            ]
+        },
+        {
+            "id": "17.14",
+            "name": "AWS Glue",
+            "pos": [
+                1106.5298458066713,
+                656.8577115773062
+            ]
+        },
+        {
+            "id": "17.15",
+            "name": "Apache HOP",
+            "pos": [
+                1288.4524945247688,
+                678.9138093091016
+            ]
+        },
+        {
+            "id": "17.16",
+            "name": "Apache/Confluent KAFKA",
+            "pos": [
+                1275.2064161453766,
+                716.939275975146
+            ]
+        },
+        {
+            "id": "18",
+            "name": "Database Management",
+            "pos": [
+                773.1774248315918,
+                1251.9528433998046
+            ]
+        },
+        {
+            "id": "18.01",
+            "name": "Database theory",
+            "pos": [
+                765.2908558261946,
+                1201.6128588200047
+            ]
+        },
+        {
+            "id": "18.02",
+            "name": "Data modeling",
+            "pos": [
+                730.6967293300783,
+                1242.57369067349
+            ]
+        },
+        {
+            "id": "18.03",
+            "name": "Relational language SQL",
+            "pos": [
+                787.707727873146,
+                1226.8483278791425
+            ]
+        },
+        {
+            "id": "18.04",
+            "name": "SQL DDL/DML/DQL",
+            "pos": [
+                789.6934712267863,
+                1290.3807703884231
+            ]
+        },
+        {
+            "id": "18.05",
+            "name": "SQL performance optimization",
+            "pos": [
+                745.9762323360891,
+                1178.0325231792497
+            ]
+        },
+        {
+            "id": "18.06",
+            "name": "Multi-dimensional data analysis with SQL",
+            "pos": [
+                751.9668774144752,
+                1308.4369760135282
+            ]
+        },
+        {
+            "id": "19",
+            "name": "Business Models",
+            "pos": [
+                55.28101342351091,
+                965.6062643787648
+            ]
+        },
+        {
+            "id": "19.01",
+            "name": "Business Model Canvas",
+            "pos": [
+                33.4991786492575,
+                928.5114890998955
+            ]
+        },
+        {
+            "id": "19.02",
+            "name": "Business Model Innovation",
+            "pos": [
+                97.46090594776048,
+                918.4924520340546
+            ]
+        },
+        {
+            "id": "19.03",
+            "name": "Digital Ecosystems",
+            "pos": [
+                119.11121147197709,
+                992.6282717900128
+            ]
+        },
+        {
+            "id": "19.04",
+            "name": "Data-Driven Insurance",
+            "pos": [
+                130.99027196746593,
+                944.6667775212841
+            ]
+        },
+        {
+            "id": "20",
+            "name": "Deep Learning & Neural Networks",
+            "pos": [
+                1722.316958902328,
+                -121.63520406405515
+            ]
+        },
+        {
+            "id": "20.01",
+            "name": "Fully connected NNs",
+            "pos": [
+                1645.5416267354242,
+                -86.06844272482482
+            ]
+        },
+        {
+            "id": "20.02",
+            "name": "Convolutional NNs",
+            "pos": [
+                1587.9575803154364,
+                -124.54684266184293
+            ]
+        },
+        {
+            "id": "20.03",
+            "name": "Training and optimization of NNs",
+            "pos": [
+                1685.9574721744104,
+                -71.69331754490496
+            ]
+        },
+        {
+            "id": "20.04",
+            "name": "Recurrent Neural Networks (RNN)",
+            "pos": [
+                1758.5994425357067,
+                -92.76851129411567
+            ]
+        },
+        {
+            "id": "20.06",
+            "name": "Transformer",
+            "pos": [
+                1605.5534889553057,
+                -107.28400641401221
+            ]
+        },
+        {
+            "id": "20.07",
+            "name": "Graph Neural Network",
+            "pos": [
+                1627.068558651971,
+                -137.46240747476705
+            ]
+        },
+        {
+            "id": "20.08",
+            "name": "Image classification",
+            "pos": [
+                1696.967697534842,
+                -158.46397947323342
+            ]
+        },
+        {
+            "id": "20.09",
+            "name": "Object localization and detection",
+            "pos": [
+                1797.8407876694835,
+                -177.31788539257096
+            ]
+        },
+        {
+            "id": "20.10",
+            "name": "Semantic and instance segmentation",
+            "pos": [
+                1807.1897792039736,
+                -140.95388267139396
+            ]
+        },
+        {
+            "id": "20.11",
+            "name": "Video analysis",
+            "pos": [
+                1705.1687065667716,
+                -184.7926476432682
+            ]
+        },
+        {
+            "id": "20.12",
+            "name": "Image generation",
+            "pos": [
+                1821.6500434727636,
+                -164.40615659300053
+            ]
+        },
+        {
+            "id": "20.13",
+            "name": "Face emotion recognition",
+            "pos": [
+                1877.9601001562783,
+                -65.18762522431493
+            ]
+        },
+        {
+            "id": "20.14",
+            "name": "Voice emotion recognition",
+            "pos": [
+                1774.8468794760763,
+                -48.605930287280756
+            ]
+        },
+        {
+            "id": "22",
+            "name": "Data Experiments",
+            "pos": [
+                -373.52711642251313,
+                175.20859933179142
+            ]
+        },
+        {
+            "id": "22.01",
+            "name": "Properties of experiments",
+            "pos": [
+                -334.4424877923411,
+                195.52410691338991
+            ]
+        },
+        {
+            "id": "22.02",
+            "name": "Design of experiments",
+            "pos": [
+                -423.54643046155877,
+                147.39315942773925
+            ]
+        },
+        {
+            "id": "22.03",
+            "name": "Carrying out experiments",
+            "pos": [
+                -386.0800933778803,
+                215.85844255975334
+            ]
+        },
+        {
+            "id": "22.04",
+            "name": "Data structures and types",
+            "pos": [
+                -294.9524052657126,
+                132.14691153373886
+            ]
+        },
+        {
+            "id": "23",
+            "name": "Project Management",
+            "pos": [
+                -146.4920822410692,
+                876.356174762272
+            ]
+        },
+        {
+            "id": "23.01",
+            "name": "Managing data projects",
+            "pos": [
+                -129.6597244924184,
+                901.0622349010538
+            ]
+        },
+        {
+            "id": "23.02",
+            "name": "Project management expertise",
+            "pos": [
+                -205.38518324338204,
+                916.5904877923412
+            ]
+        },
+        {
+            "id": "23.03",
+            "name": "Real-life pitching situations",
+            "pos": [
+                -176.63825340529422,
+                852.8674099203291
+            ]
+        },
+        {
+            "id": "24",
+            "name": "Digital Leadership",
+            "pos": [
+                1448.3636083269084,
+                -240.52744795682347
+            ]
+        },
+        {
+            "id": "24.01",
+            "name": "Innovation and change leadership",
+            "pos": [
+                1414.27232074017,
+                -200.9407093292213
+            ]
+        },
+        {
+            "id": "24.02",
+            "name": "Collaborative leadership",
+            "pos": [
+                1363.674016962221,
+                -222.58450269853503
+            ]
+        },
+        {
+            "id": "24.03",
+            "name": "Coaching as leadership skill",
+            "pos": [
+                1481.955589822668,
+                -220.49444872783337
+            ]
+        },
+        {
+            "id": "24.04",
+            "name": "In-depth study of leadership and change",
+            "pos": [
+                1395.4892829606786,
+                -264.56399383191973
+            ]
+        },
+        {
+            "id": "24.05",
+            "name": "Self-management",
+            "pos": [
+                1489.500231303007,
+                -281.81611410948346
+            ]
+        },
+        {
+            "id": "25",
+            "name": "Ethics",
+            "pos": [
+                926.4459213569776,
+                1079.027864302236
+            ]
+        },
+        {
+            "id": "25.01",
+            "name": "Digital society and ethics",
+            "pos": [
+                880.2321685053512,
+                1046.296362883165
+            ]
+        },
+        {
+            "id": "25.02",
+            "name": "Data Ethics",
+            "pos": [
+                942.6126524172591,
+                1061.0943703418143
+            ]
+        },
+        {
+            "id": "25.03",
+            "name": "Algorithm Ethics",
+            "pos": [
+                832.1983998686428,
+                1095.2747023044633
+            ]
+        },
+        {
+            "id": "25.04",
+            "name": "Corporate Digital Responsibility (CDR)",
+            "pos": [
+                877.6107959409338,
+                1128.3254320987655
+            ]
+        },
+        {
+            "id": "25.05",
+            "name": "Ethical Analysis Toolbox",
+            "pos": [
+                923.8248576130103,
+                1107.5037120047532
+            ]
+        },
+        {
+            "id": "26",
+            "name": "Fraud Detection",
+            "pos": [
+                395.3075845969332,
+                -659.7314052942685
+            ]
+        },
+        {
+            "id": "26.01",
+            "name": "Strategies",
+            "pos": [
+                360.7296917328308,
+                -633.4753881230188
+            ]
+        },
+        {
+            "id": "26.02",
+            "name": "Tools",
+            "pos": [
+                418.01607781490065,
+                -623.0118471591609
+            ]
+        },
+        {
+            "id": "26.03",
+            "name": "Solutions",
+            "pos": [
+                474.3395441998151,
+                -631.5483345279224
+            ]
+        },
+        {
+            "id": "26.04",
+            "name": "Lab Experience",
+            "pos": [
+                350.01863983361386,
+                -681.8805381174025
+            ]
+        },
+        {
+            "id": "26.05",
+            "name": "Case Study",
+            "pos": [
+                414.0073406103351,
+                -687.115943064241
+            ]
+        },
+        {
+            "id": "27",
+            "name": "Geospatial Data Analysis",
+            "pos": [
+                1554.9518941146234,
+                -696.5215985607807
+            ]
+        },
+        {
+            "id": "27.01",
+            "name": "Smart communities",
+            "pos": [
+                1482.8858432565178,
+                -713.9722303606605
+            ]
+        },
+        {
+            "id": "27.02",
+            "name": "Principles of georeferencing",
+            "pos": [
+                1440.6012006339415,
+                -679.4245072674827
+            ]
+        },
+        {
+            "id": "27.03",
+            "name": "Simulations",
+            "pos": [
+                1585.4182575173477,
+                -652.9567463377016
+            ]
+        },
+        {
+            "id": "27.04",
+            "name": "Movement patterns",
+            "pos": [
+                1705.7837162683113,
+                -649.6055050115644
+            ]
+        },
+        {
+            "id": "27.05",
+            "name": "Spatial data used for political purposes",
+            "pos": [
+                1575.7890208172705,
+                -732.4588589051651
+            ]
+        },
+        {
+            "id": "27.06",
+            "name": "Data preparation",
+            "pos": [
+                1521.4526137239782,
+                -762.5806784888198
+            ]
+        },
+        {
+            "id": "27.07",
+            "name": "Geospatial Data",
+            "pos": [
+                1477.0808369742138,
+                -652.9750151346404
+            ]
+        },
+        {
+            "id": "28",
+            "name": "Interview Training",
+            "pos": [
+                1678.272111025443,
+                -371.4659151888965
+            ]
+        },
+        {
+            "id": "28.01",
+            "name": "CV and Cover Letter Preparation",
+            "pos": [
+                1624.310471354775,
+                -391.07610882712
+            ]
+        },
+        {
+            "id": "28.02",
+            "name": "Technical data challenge",
+            "pos": [
+                1693.01688765566,
+                -354.7254066852803
+            ]
+        },
+        {
+            "id": "28.03",
+            "name": "Individual feedback",
+            "pos": [
+                1646.4791817226578,
+                -327.2594594072652
+            ]
+        },
+        {
+            "id": "28.04",
+            "name": "Coaching sessions",
+            "pos": [
+                1593.4329807247493,
+                -358.2639907478786
+            ]
+        },
+        {
+            "id": "29",
+            "name": "Legal Aspects",
+            "pos": [
+                1127.1421952194205,
+                1137.4452616730287
+            ]
+        },
+        {
+            "id": "29.01",
+            "name": "Data Protection",
+            "pos": [
+                1113.5057565020256,
+                1165.3920789349277
+            ]
+        },
+        {
+            "id": "29.02",
+            "name": "Data Economy",
+            "pos": [
+                1150.425012148167,
+                1115.453259839103
+            ]
+        },
+        {
+            "id": "30",
+            "name": "Linear Algebra",
+            "pos": [
+                -248.7243639167308,
+                297.13212541763045
+            ]
+        },
+        {
+            "id": "30.01",
+            "name": "Matrix algebra",
+            "pos": [
+                -163.59406345764032,
+                261.9231314120888
+            ]
+        },
+        {
+            "id": "30.02",
+            "name": "Euclidean vector space",
+            "pos": [
+                -276.26260557760696,
+                274.80361970168593
+            ]
+        },
+        {
+            "id": "30.03",
+            "name": "Linear maps",
+            "pos": [
+                -160.39778055672562,
+                308.36081539271885
+            ]
+        },
+        {
+            "id": "30.04",
+            "name": "Matrix decompositions",
+            "pos": [
+                -221.37883706709465,
+                319.6746004186271
+            ]
+        },
+        {
+            "id": "30.05",
+            "name": "Norms and Distances",
+            "pos": [
+                -245.75548498203608,
+                344.4021585339042
+            ]
+        },
+        {
+            "id": "30.06",
+            "name": "Linear Systems",
+            "pos": [
+                -256.4202684448229,
+                250.80140489540312
+            ]
+        },
+        {
+            "id": "31",
+            "name": "Digitalisation",
+            "pos": [
+                164.6856779234133,
+                1254.4457813415574
+            ]
+        },
+        {
+            "id": "31.01",
+            "name": "business models",
+            "pos": [
+                31.290208172706343,
+                1350.95566692367
+            ]
+        },
+        {
+            "id": "31.02",
+            "name": "business processes",
+            "pos": [
+                135.14063222821903,
+                1394.020894371627
+            ]
+        },
+        {
+            "id": "31.03",
+            "name": "Megatrend Digitalisation",
+            "pos": [
+                219.56152659984588,
+                1087.9945258288358
+            ]
+        },
+        {
+            "id": "31.04",
+            "name": "Enabling Technologies",
+            "pos": [
+                161.5236700077102,
+                1110.3228475970188
+            ]
+        },
+        {
+            "id": "31.05",
+            "name": "Big data and Artificial Intelligence",
+            "pos": [
+                91.36975070675925,
+                1091.0406836288873
+            ]
+        },
+        {
+            "id": "31.06",
+            "name": "Virtual and augmented reality",
+            "pos": [
+                250.14636340272432,
+                1133.4054741711643
+            ]
+        },
+        {
+            "id": "31.07",
+            "name": "Robotics",
+            "pos": [
+                218.57257774351075,
+                1181.7802878437421
+            ]
+        },
+        {
+            "id": "31.08",
+            "name": "Drones",
+            "pos": [
+                244.6616808018506,
+                1311.6474171164225
+            ]
+        },
+        {
+            "id": "31.09",
+            "name": "Blockchain",
+            "pos": [
+                237.78365458750977,
+                1335.4034695451041
+            ]
+        },
+        {
+            "id": "31.11",
+            "name": "3-D Printing",
+            "pos": [
+                294.13186841428944,
+                1171.9021331277306
+            ]
+        },
+        {
+            "id": "31.12",
+            "name": "Internet of Things",
+            "pos": [
+                -10.254973014649067,
+                1112.8545361089693
+            ]
+        },
+        {
+            "id": "31.13",
+            "name": "Individualization",
+            "pos": [
+                -4.790619378051872,
+                1142.3422770496015
+            ]
+        },
+        {
+            "id": "31.14",
+            "name": "Intermediation and Sharing",
+            "pos": [
+                89.90609097918286,
+                1306.6232074016962
+            ]
+        },
+        {
+            "id": "31.15",
+            "name": "Socialisation",
+            "pos": [
+                167.85705474171186,
+                1213.4528141865844
+            ]
+        },
+        {
+            "id": "31.16",
+            "name": "Automation",
+            "pos": [
+                124.29622205088685,
+                1226.891827293755
+            ]
+        },
+        {
+            "id": "31.17",
+            "name": "Mobilisation and Democratisation",
+            "pos": [
+                108.2474942174249,
+                1178.4286044718583
+            ]
+        },
+        {
+            "id": "31.18",
+            "name": "Disruptive Forces",
+            "pos": [
+                228.31781033153447,
+                1153.544410177332
+            ]
+        },
+        {
+            "id": "31.19",
+            "name": "Industry Disruption",
+            "pos": [
+                149.5156515034696,
+                1338.2818041634541
+            ]
+        },
+        {
+            "id": "31.21",
+            "name": "Business Model Innovation",
+            "pos": [
+                185.05212027756374,
+                1367.7695451040863
+            ]
+        },
+        {
+            "id": "31.22",
+            "name": "Digital Business Models",
+            "pos": [
+                18.8331534309948,
+                1258.5504240555128
+            ]
+        },
+        {
+            "id": "31.23",
+            "name": "Digital Strategies",
+            "pos": [
+                102.51580570547435,
+                1129.843562066307
+            ]
+        },
+        {
+            "id": "31.24",
+            "name": "Digital Maturity Models",
+            "pos": [
+                111.68650732459537,
+                1153.5996144949886
+            ]
+        },
+        {
+            "id": "31.25",
+            "name": "Digital Use Cases",
+            "pos": [
+                31.442868157286284,
+                1197.9897455666924
+            ]
+        },
+        {
+            "id": "31.26",
+            "name": "Innovation and the DCF",
+            "pos": [
+                272.17378565921365,
+                1205.697070161912
+            ]
+        },
+        {
+            "id": "31.27",
+            "name": "Impact on Employment",
+            "pos": [
+                256.1250578257518,
+                1228.3067848882038
+            ]
+        },
+        {
+            "id": "31.28",
+            "name": "AI and Ethics",
+            "pos": [
+                47.49159599074801,
+                1278.4286044718583
+            ]
+        },
+        {
+            "id": "31.29",
+            "name": "Cyber Crime and Security",
+            "pos": [
+                266.442097147263,
+                1275.8188897455666
+            ]
+        },
+        {
+            "id": "32",
+            "name": "Python",
+            "pos": [
+                -310.70164723691767,
+                -235.9723414984158
+            ]
+        },
+        {
+            "id": "32.01",
+            "name": "Database Programming",
+            "pos": [
+                -291.23853036398543,
+                -139.89435654091312
+            ]
+        },
+        {
+            "id": "32.02",
+            "name": "Data Types (List, Dict, ...)",
+            "pos": [
+                -348.67422541670715,
+                -265.92764733012456
+            ]
+        },
+        {
+            "id": "32.03",
+            "name": "Control structures",
+            "pos": [
+                -247.14538390577607,
+                -303.72239625021683
+            ]
+        },
+        {
+            "id": "32.04",
+            "name": "Read/Write data (CSV, JSON)",
+            "pos": [
+                -194.78066460592055,
+                -255.9626309045184
+            ]
+        },
+        {
+            "id": "32.05",
+            "name": "Functions",
+            "pos": [
+                -350.6990150909572,
+                -306.6824862963016
+            ]
+        },
+        {
+            "id": "32.06",
+            "name": "Object oriented concepts",
+            "pos": [
+                -191.9517557248345,
+                -225.22487523318094
+            ]
+        },
+        {
+            "id": "32.07",
+            "name": "Recursion",
+            "pos": [
+                -382.9950433084208,
+                -208.7876071941889
+            ]
+        },
+        {
+            "id": "32.08",
+            "name": "Use of packages/modules",
+            "pos": [
+                -247.76383740647256,
+                -187.51949836616976
+            ]
+        },
+        {
+            "id": "32.09",
+            "name": "Testing",
+            "pos": [
+                -405.72451589529294,
+                -240.695417153114
+            ]
+        },
+        {
+            "id": "32.10",
+            "name": "Lambda concept",
+            "pos": [
+                -350.96481401916856,
+                -170.66200671877834
+            ]
+        },
+        {
+            "id": "32.11",
+            "name": "Decorator concept",
+            "pos": [
+                -235.1269831273669,
+                -163.81286767997082
+            ]
+        },
+        {
+            "id": "32.12",
+            "name": "Python for data projects",
+            "pos": [
+                -186.37368729748405,
+                -283.97859319088394
+            ]
+        },
+        {
+            "id": "33",
+            "name": "Audio Processing",
+            "pos": [
+                1277.3147349495991,
+                -73.46234125474675
+            ]
+        },
+        {
+            "id": "33.01",
+            "name": "Audio-Signals",
+            "pos": [
+                1175.990675918787,
+                -83.85466461063963
+            ]
+        },
+        {
+            "id": "33.02",
+            "name": "Pattern Recognition",
+            "pos": [
+                1299.453652017476,
+                -93.0429144178872
+            ]
+        },
+        {
+            "id": "33.03",
+            "name": "Matrix algebra",
+            "pos": [
+                1180.5652233073474,
+                -57.72595576686918
+            ]
+        },
+        {
+            "id": "33.04",
+            "name": "Euclidean vector space",
+            "pos": [
+                1273.6021038579056,
+                -58.82372169393746
+            ]
+        },
+        {
+            "id": "33.05",
+            "name": "Linear maps",
+            "pos": [
+                1220.9240799280392,
+                -99.9889134469856
+            ]
+        },
+        {
+            "id": "33.06",
+            "name": "Matrix decompositions",
+            "pos": [
+                1197.9650950912364,
+                -40.77896270595921
+            ]
+        },
+        {
+            "id": "34",
+            "name": "Recommender Systems",
+            "pos": [
+                1307.1906711090548,
+                39.75925759890409
+            ]
+        },
+        {
+            "id": "34.01",
+            "name": "Content-based RS",
+            "pos": [
+                1320.9138267016192,
+                58.77251716611036
+            ]
+        },
+        {
+            "id": "34.02",
+            "name": "Collaborative filtering",
+            "pos": [
+                1206.9409166589562,
+                8.69455375927419
+            ]
+        },
+        {
+            "id": "34.03",
+            "name": "Matrix Factorization",
+            "pos": [
+                1180.4193407946545,
+                34.278759524830086
+            ]
+        },
+        {
+            "id": "34.04",
+            "name": "Restricted Boltzmann Machines",
+            "pos": [
+                1276.1042267000653,
+                20.910385319147384
+            ]
+        },
+        {
+            "id": "34.05",
+            "name": "Knowledge graph-based RS",
+            "pos": [
+                1177.5508065929919,
+                58.587687648420015
+            ]
+        },
+        {
+            "id": "34.06",
+            "name": "Hybrid recommender",
+            "pos": [
+                1239.6970770793002,
+                75.03216912190615
+            ]
+        },
+        {
+            "id": "35",
+            "name": "Scientific Writing and Presentation Skills",
+            "pos": [
+                1156.9986917816045,
+                1005.3209953882176
+            ]
+        },
+        {
+            "id": "35.01",
+            "name": "Planning and structuring SW and presentations",
+            "pos": [
+                1158.7076019981985,
+                1050.6705614332307
+            ]
+        },
+        {
+            "id": "35.02",
+            "name": "Language style and form, best practices (including APA)",
+            "pos": [
+                1110.0810060253004,
+                1025.7883863045777
+            ]
+        },
+        {
+            "id": "35.03",
+            "name": "Persuasive verbal, non-verbal and visual communication",
+            "pos": [
+                1128.6526829914735,
+                964.6948642415502
+            ]
+        },
+        {
+            "id": "35.04",
+            "name": "Stakeholder communication",
+            "pos": [
+                1087.7062326115815,
+                981.0185658025883
+            ]
+        },
+        {
+            "id": "35.05",
+            "name": "Anglo-American/German conventions",
+            "pos": [
+                1233.2403194126243,
+                981.8188258621373
+            ]
+        },
+        {
+            "id": "36",
+            "name": "Sport Data Analytics",
+            "pos": [
+                29.148879645533206,
+                -642.8037187224838
+            ]
+        },
+        {
+            "id": "36.01",
+            "name": "Sport Phenomena",
+            "pos": [
+                63.99341784123976,
+                -671.54827965496
+            ]
+        },
+        {
+            "id": "36.02",
+            "name": "Sports Data Analytics",
+            "pos": [
+                -5.001260192772492,
+                -610.5685069605711
+            ]
+        },
+        {
+            "id": "36.03",
+            "name": "Profiling / Scouting",
+            "pos": [
+                22.705158872623883,
+                -578.061406956776
+            ]
+        },
+        {
+            "id": "36.04",
+            "name": "Athlete Development",
+            "pos": [
+                124.35879719004171,
+                -603.1560068370773
+            ]
+        },
+        {
+            "id": "37",
+            "name": "Sustainability Analytics",
+            "pos": [
+                1214.9715202868729,
+                -709.3347340106181
+            ]
+        },
+        {
+            "id": "37.01",
+            "name": "Sustainability",
+            "pos": [
+                1198.132828372154,
+                -644.7313227775041
+            ]
+        },
+        {
+            "id": "37.02",
+            "name": "Regression",
+            "pos": [
+                1246.567577819481,
+                -660.4008695651726
+            ]
+        },
+        {
+            "id": "37.03",
+            "name": "Time-series analysis",
+            "pos": [
+                1140.6017338112754,
+                -682.9772570882426
+            ]
+        },
+        {
+            "id": "37.04",
+            "name": "System dynamics",
+            "pos": [
+                1186.7315716116282,
+                -742.2481784194406
+            ]
+        },
+        {
+            "id": "37.05",
+            "name": "Systems tools",
+            "pos": [
+                1132.1263929943061,
+                -717.5467841763153
+            ]
+        },
+        {
+            "id": "37.06",
+            "name": "Integrated assessment modeling",
+            "pos": [
+                1261.6386756123134,
+                -729.948908737268
+            ]
+        },
+        {
+            "id": "37.07",
+            "name": "Sustainable development goals",
+            "pos": [
+                1280.6798332795004,
+                -690.5026200558854
+            ]
+        },
+        {
+            "id": "37.08",
+            "name": "Climate science",
+            "pos": [
+                1153.0635638079277,
+                -661.866593402894
+            ]
+        },
+        {
+            "id": "37.09",
+            "name": "Finite resource management",
+            "pos": [
+                1285.9465364640416,
+                -672.5282751268628
+            ]
+        },
+        {
+            "id": "38",
+            "name": "Finance Analytics",
+            "pos": [
+                1250.6869949295774,
+                -904.4981521126747
+            ]
+        },
+        {
+            "id": "38.01",
+            "name": "Time Series Analysis in Finance",
+            "pos": [
+                1196.0348826482204,
+                -872.4600912895322
+            ]
+        },
+        {
+            "id": "38.02",
+            "name": "Principles of financial markets",
+            "pos": [
+                1214.8372147920502,
+                -832.4043719341076
+            ]
+        },
+        {
+            "id": "38.03",
+            "name": "Risk management",
+            "pos": [
+                1343.8341909233175,
+                -880.8506478873225
+            ]
+        },
+        {
+            "id": "38.04",
+            "name": "Portfolio management (Markowitz, CAPM)",
+            "pos": [
+                1215.9615416087636,
+                -971.3729280500768
+            ]
+        },
+        {
+            "id": "38.05",
+            "name": "Forecast models",
+            "pos": [
+                1133.462794115806,
+                -956.8381259217515
+            ]
+        },
+        {
+            "id": "38.06",
+            "name": "Crypto assets",
+            "pos": [
+                1129.4220926044575,
+                -901.5847044099592
+            ]
+        },
+        {
+            "id": "38.07",
+            "name": "High frequency trading",
+            "pos": [
+                1158.8027830264377,
+                -921.9563586507757
+            ]
+        },
+        {
+            "id": "38.08",
+            "name": "Macroeconomic time series",
+            "pos": [
+                1275.7150444688175,
+                -853.4898024673917
+            ]
+        },
+        {
+            "id": "38.09",
+            "name": "Behavioral finance",
+            "pos": [
+                1220.184663536776,
+                -943.4978090766813
+            ]
+        },
+        {
+            "id": "39",
+            "name": "Open Data",
+            "pos": [
+                497.72047670148487,
+                -946.9266047230857
+            ]
+        },
+        {
+            "id": "39.01",
+            "name": "open data infrastructures",
+            "pos": [
+                527.7360414669205,
+                -926.404272987227
+            ]
+        },
+        {
+            "id": "39.02",
+            "name": "data visualizations",
+            "pos": [
+                510.12973041001106,
+                -899.5043387028916
+            ]
+        },
+        {
+            "id": "39.03",
+            "name": "open data policy",
+            "pos": [
+                403.3136689145413,
+                -900.0104005357241
+            ]
+        },
+        {
+            "id": "40",
+            "name": "Energy Systems",
+            "pos": [
+                18.601998472459442,
+                -930.0298857964015
+            ]
+        },
+        {
+            "id": "40.01",
+            "name": "Principles",
+            "pos": [
+                -16.626983396135678,
+                -876.2417952588298
+            ]
+        },
+        {
+            "id": "40.02",
+            "name": "Collecting energy system data",
+            "pos": [
+                0.2566407853449135,
+                -850.2741993259981
+            ]
+        },
+        {
+            "id": "40.03",
+            "name": "Remote diagnosis",
+            "pos": [
+                -72.19774647887266,
+                -892.9597183098576
+            ]
+        },
+        {
+            "id": "40.04",
+            "name": "smart maintenance",
+            "pos": [
+                112.28984655814662,
+                -870.36471025588
+            ]
+        },
+        {
+            "id": "40.05",
+            "name": "Estimating residential energy demand",
+            "pos": [
+                94.76169303665797,
+                -909.7089467568698
+            ]
+        },
+        {
+            "id": "40.06",
+            "name": "Load forecasting",
+            "pos": [
+                44.01408450704275,
+                -893.6571830985902
+            ]
+        },
+        {
+            "id": "41",
+            "name": "Linux",
+            "pos": [
+                -670.0434332354947,
+                -71.15973100750548
+            ]
+        },
+        {
+            "id": "41.01",
+            "name": "Medium concepts",
+            "pos": [
+                -694.015135424462,
+                -23.93239723744702
+            ]
+        },
+        {
+            "id": "41.02",
+            "name": "Connection Methods (RDP, SSH) ",
+            "pos": [
+                -638.2031933067707,
+                -44.9093016703339
+            ]
+        },
+        {
+            "id": "41.03",
+            "name": "Base concepts",
+            "pos": [
+                -669.8057701854283,
+                -100.66573342005404
+            ]
+        },
+        {
+            "id": "42",
+            "name": "Virtualisation",
+            "pos": [
+                -424.8674083163344,
+                -75.47647918440302
+            ]
+        },
+        {
+            "id": "42.01",
+            "name": "EnterpriseLab (Linux-VM)",
+            "pos": [
+                -401.8110959924062,
+                -50.99809184224267
+            ]
+        },
+        {
+            "id": "43",
+            "name": "Supply chain Management",
+            "pos": [
+                1640.2572908549091,
+                -574.2281627942529
+            ]
+        },
+        {
+            "id": "43.01",
+            "name": "Logistics",
+            "pos": [
+                1584.3502160413786,
+                -588.6162295952402
+            ]
+        },
+        {
+            "id": "43.02",
+            "name": "Supply network resilience",
+            "pos": [
+                1587.7460462018314,
+                -552.8348050867987
+            ]
+        },
+        {
+            "id": "43.03",
+            "name": "Network modelling",
+            "pos": [
+                1646.5597189778798,
+                -605.152442773959
+            ]
+        },
+        {
+            "id": "43.04",
+            "name": "Smart logistics service design",
+            "pos": [
+                1651.825394198633,
+                -531.4766534802106
+            ]
+        },
+        {
+            "id": "44",
+            "name": "Data Strategy and Governance",
+            "pos": [
+                1625.0930657199824,
+                500.41100451492184
+            ]
+        },
+        {
+            "id": "44.01",
+            "name": "Data Strategy",
+            "pos": [
+                1724.8318693206438,
+                467.7664373462638
+            ]
+        },
+        {
+            "id": "44.02",
+            "name": "Data maping",
+            "pos": [
+                1651.0857495397574,
+                521.8635321090904
+            ]
+        },
+        {
+            "id": "44.03",
+            "name": "Cloud Governance",
+            "pos": [
+                1566.3121725953738,
+                535.9860946542402
+            ]
+        },
+        {
+            "id": "44.04",
+            "name": "Data Ruirements engineering",
+            "pos": [
+                1547.0141225592538,
+                482.56548207297044
+            ]
+        }
+    ]
+}

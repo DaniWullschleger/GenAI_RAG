@@ -1,0 +1,70 @@
+Code                Name                                              ECTS Semester Group                              Reqs                Topics                                            
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+START               Start                                             3    1        Required Module                                                                                          
+W.MSCIDS_CSC01      Computer Science Concepts for
+Data Scientists     3    1        Required Module                    START               Computer systems and networks, Software Develop   
+W.MSCIDS_DDE01      Design for Data Experiments                       3    1        Required Module                    START               Properties of experiments, Design of experiment   
+W.MSCIDS_DQU01      Data Quality                                      3    2        Required Module                    W.MSCIDS_DDE01      Principles, Dimensions, Detecting Problems, Mod   
+W.MSCIDS_PDS01      Python for Data Science                           6    1        Required Module                    START               Data Types (List, Dict, ...), Control structure   
+W.MSCIDS_SA01       Classical and Bayesian Statistics                 6    1        Required Module                    START               Exploratory data analysis, Introduction to prob   
+W.MSCIDS_CIP02      Data Collection, Integration and
+Preprocessing    3    2        Required Module                    W.MSCIDS_CSC01, W.MSCIDS_PDS01Manipulate Data Structures, ETL Process, Web Da   
+W.MSCIDS_DBM02      Database Management for
+Data Scientists           3    2        Required Module                    W.MSCIDS_CSC01, W.MSCIDS_PDS01Database theory, Data modeling, Relational lang   
+W.MSCIDS_MPM02      Applied Machine Learning and
+Predictive Modelli   3    2        Required Module                    W.MSCIDS_SA01       Linear Regression, Generalised Linear Models, G   
+W.MSCIDS_RTP02      Discrete Response, Time Series
+and Panel Data     3    2        Required Module                    W.MSCIDS_SA01       Discrete Response, Time Series, Panel Data, Qua   
+W.MSCIDS_MPM03      Applied Machine Learning and
+Predictive Modelli   3    2        Required Module                    W.MSCIDS_MPM02      Dimensionality reduction, Multi-dimensional Sca   
+W.MSCIDS_DDB01      Data-Driven Business Models                       3    1        General Core Elective Module                           Business Model Canvas, Business Model Innovatio   
+W.MSCIDS_DDP01      Designing and Managing Data Projects              3    1        General Core Elective Module                           Managing data projects, Project management expe   
+W.MSCIDS_DI01       Data Ideation                                     3    1        General Core Elective Module                           Big Data / Analytics, Hybrid model, Communicati   
+W.MSCIDS_LIA01      Linear Algebra 1                                  3    1        Required Module                                        Matrix algebra, Linear Systems                    
+W.MSCIDS_LIA02      Linear Algebra 2                                  3    1        General Core Elective Module       W.MSCIDS_LIA01      Euclidean vector space, Linear maps, Matrix dec   
+W.MSCIDS_RB01       R-Bootcamp                                        3    1        General Core Elective Module                           Basic objects, Simple computations, Basic Graph   
+W.MSCIDS_HCD02      Human Centered Design                             3    2        General Core Elective Module                           Relevance of HCD, Mindset, concepts, processes,   
+W.MSCIDS_MDE02      Management of Digital Enterprise                  3    2        General Core Elective Module                           business models, business processes, Megatrend    
+W.MSCIDS_CW03       Scientific Writing and
+Presentation Skills        3    3        General Core Elective Module                           Planning and structuring SW and presentations,    
+W.MSCIDS_DVN03      Data Visualisation and Narration                  3    3        General Core Elective Module                           Narration, Human perception, Information proces   
+W.MSCIDS_EBD03      Ethical Issues of Big Data                        3    3        General Core Elective Module                           Digital society and ethics, Data Ethics, Algori   
+W.MSCIDS_LBD03      Legal Issues of Big Data                          3    3        General Core Elective Module                           Data Protection, Data Economy                     
+W.MSCIDS_NET02      Collaborative Innovation Networks                 3    3        General Core Elective Module       W.MSCIDS_MPM02, W.MSCIDS_CIP02Human Dynamics, Collaborative Innovation Networ   
+W.MSCIDS_WDS02      Web and Data Scraping with R                      3    3        General Core Elective Module       W.MSCIDS_MPM02, W.MSCIDS_RB01Web Data Scraping, REST APIs, MySQL/MariaDB, Re   
+W.MSCIDS_DL04       Digital Leadership                                3    4        General Core Elective Module                           Innovation and change leadership, Collaborative   
+W.MSCIDS_DIT04      Interview Training for
+Data Scientists            3    4        General Core Elective Module                           CV and Cover Letter Preparation, Technical data   
+W.MSCIDS_AMS03      Analysis and Modelling of
+Social Interactions     3    3        Core Elective Module Advanced Topics                    Social Complexity, Social Network Data, Network   
+W.MSCIDS_BDL03_1    NoSQL Lab with
+Python & MongoDB                   3    3        Core Elective Module Advanced TopicsW.MSCIDS_DBM02, W.MSCIDS_CIP02Database Programming, NoSQL, MongoDB, MySQL/Mar   
+W.MSCIDS_BDL03_2    Big Data in the Cloud                             3    3        Core Elective Module Advanced TopicsW.MSCIDS_DBM02, W.MSCIDS_CIP02Business Requirements, Data Lake Systems, Azure   
+W.MSCIDS_CTA03      Computational Language
+Technologies               3    3        Core Elective Module Advanced TopicsW.MSCIDS_MPM02, W.MSCIDS_CIP02Linguistic Concepts, Text Processing, Explorato   
+W.MSCIDS_DLB03      Deep Learning                                     3    3        Core Elective Module Advanced TopicsW.MSCIDS_MPM02, W.MSCIDS_MPM03Fully connected NNs, Convolutional NNs, Recurre   
+W.MSCIDS_CVI03      Computer Vision                                   3    3        Core Elective Module Advanced TopicsW.MSCIDS_DLB03      Fully connected NNs, Convolutional NNs, Trainin   
+W.MSCIDS_DWL03      Data Warehousing and
+Data Lake Systems            6    3        Core Elective Module Advanced TopicsW.MSCIDS_DBM02      Business Requirements, Data Lake Systems, Data    
+W.MSCIDS_ETL03      Modern Data Engineering                           3    3        Core Elective Module Advanced TopicsW.MSCIDS_DBM02, W.MSCIDS_CIP02ETL Process, Principles, Data Lake Systems, Clo   
+W.MSCIDS_PRA03      Pattern Recognition in
+Audio-Signals              3    3        Core Elective Module Advanced TopicsW.MSCIDS_MPM02, W.MSCIDS_CIP02Audio-Signals, Pattern Recognition, Matrix alge   
+W.MSCIDS_REC03      Recommender Systems                               3    3        Core Elective Module Advanced TopicsW.MSCIDS_MPM02, W.MSCIDS_CIP02Content-based RS, Collaborative filtering, Matr   
+W.MSCIDS_DE_CRA01   Customer Data Analytics                           3    open     Core Elective Module Domain Experience                    Customer Experiences, Customer Journey, Custome   
+W.MSCIDS_DE_DAE01   Data Analytics for Energy Systems
+and IoT         3    open     Core Elective Module Domain Experience                    Energy Systems, IoT, Principles, Collecting ene   
+W.MSCIDS_DE_FRD01   Fraud Detection                                   3    open     Core Elective Module Domain Experience                    Strategies, Tools, Solutions, Lab Experience, C   
+W.MSCIDS_DE_GD01    Geospatial Data Analysis for
+Smart Communities    3    open     Core Elective Module Domain Experience                    Smart communities, Principles of georeferencing   
+W.MSCIDS_DE_HEA01   Data Science in Healthcare                        3    open     Core Elective Module Domain ExperienceW.MSCIDS_SA01       Healthcare, Data Science Role, Working with Dat   
+W.MSCIDS_DE_NER01   Natural Experiments Using R                       3    open     Core Elective Module Domain Experience                    Natural Experiments, Matching, Instrumental Var   
+W.MSCIDS_DE_ODS01   Tourism and Open Destination
+Data Space           3    open     Core Elective Module Domain Experience                    Tourism, Tableau, Geospatial Data, open data in   
+W.MSCIDS_DE_SDA01   Sport Data Analytics                              3    open     Core Elective Module Domain Experience                    Sports, Sport Phenomena, Sports Data Analytics,   
+W.MSCIDS_DE_SUA01   Sustainability Analytics                          3    open     Core Elective Module Domain Experience                    Sustainability, Sustainability, Regression, Tim   
+W.MSCIDS_DE_TSA01   Time Series Analysis in Finance                   3    open     Core Elective Module Domain Experience                    Finance, Time Series Analysis in Finance, Princ   
+W.MSCIDS_LOG01      Data-driven Supply Chain Management
+und Logisti   3    open     Core Elective Module Domain Experience                    Logistics, Supply network resilience, Network m   
+W.MSCIDS_GOV03      Data Strategy and Governance                      3    3        Core Elective Module Advanced TopicsW.MSCIDS_DBM02      Data Strategy, Data maping, Cloud Governance, D   
+W.MSCIDS_HVD03      Hands-on Visualisation for
+Data Science           3    3        Core Elective Module Advanced TopicsW.MSCIDS_DBM02, W.MSCIDS_PDS01Design Principles, Planning, Design Phase, Dasb   
