@@ -44,18 +44,34 @@ def retrieve_documents(query_embedding, faiss_index, docs, top_k):
     return [(docs[i], distances[0][j]) for j, i in enumerate(indices[0])]
 
 
-def generate_response(model, query, embeddings, docs, top_k, temperature, system_content):
+def format_input_for_model(topic, query, retrieved_docs, ):
+    # Join the content of the retrieved documents, each potentially with a tag
+    document_contexts = '\n'.join([f"- {doc[0]} (Relevance Score: {doc[1]:.2f})" for doc in retrieved_docs])
+
+    # Fill in the template
+    query_context_template = f"""Topic: {topic}
+    Question: {query}
+    Relevant Information:
+    {document_contexts}
+    """
+
+    formatted_input = query_context_template.format(topic=topic, query=query, document_contexts=document_contexts)
+    return formatted_input
+
+def generate_response(model, query, embeddings, docs, top_k, temperature, system_content, topic):
     # Encode the query to get its embedding
     query_embedding = model.encode([query]).astype('float32')
     # Retrieve documents based on the query embedding
     retrieved_docs = retrieve_documents(query_embedding, embeddings, docs, top_k)
-    # Form the context from retrieved documents
-    context = ' '.join([doc[0] for doc in retrieved_docs])
+
+    # Format the input for the model using the template
+    formatted_input = format_input_for_model(topic, query, retrieved_docs)
+    st.session_state['latest_query'] = formatted_input
 
     # Include chat history in the messages
     messages = st.session_state['chat_history'] + [
         {"role": "system", "content": system_content},
-        {"role": "user", "content": context}
+        {"role": "user", "content": formatted_input}
     ]
 
     # Get a timestamp and generate the response
@@ -88,6 +104,8 @@ def main():
         st.session_state['chat_history'] = []
     if 'timestamps' not in st.session_state:  # Initialize timestamps in session_state
         st.session_state['timestamps'] = []
+    if 'latest_query' not in st.session_state:
+        st.session_state['latest_query'] = ""
 
     # Dynamically list available topics based on directory names
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -119,7 +137,7 @@ def main():
     # User settings for system context in an expander absed on the selected topic
     with st.expander("Set System Context"):
         default_context = default_system_contexts.get(topic, "You are a helpful assistant.")
-        user_defined_context = st.text_area("Enter the fixed system context you want the model to use:",
+        system_context = st.text_area("Enter the fixed system context you want the model to use:",
                                             default_context,
                                             help="This context helps guide the model's behavior.")
 
@@ -137,8 +155,13 @@ def main():
     user_query = st.text_input("Enter your query:", help="Type your query here and press 'Generate Response'.")
     submitted = st.button("Generate Response")
     if submitted and user_query:
-        response = generate_response(model, user_query, embeddings, docs, top_k, temperature, user_defined_context)
+        response = generate_response(model, user_query, embeddings, docs, top_k, temperature, system_context, topic)
         st.text_area("Response", response, height=300)
+
+    # Expander to display the latest query
+    query_expander = st.expander("Latest Query to Model", expanded=False)
+    with query_expander:
+        st.text(st.session_state['latest_query'])
 
     # Expander to display chat history in reverse order (New on top, Old below)
     chat_expander = st.expander("Show Chat History", expanded=False)
