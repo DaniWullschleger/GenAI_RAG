@@ -75,21 +75,26 @@ def generate_response(model, query, embeddings, docs, top_k, temperature, system
     ]
 
     # Get a timestamp and generate the response
-    response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages=messages,
-        max_tokens=300,
-        temperature=temperature
-    )
+    try:
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=messages,
+            max_tokens=300,
+            temperature=temperature
+        )
+        response_text = response.choices[0].message['content'].strip()
+    except:
+        response_text = "Error during API Call"
+
     current_time = datetime.now().strftime("%H:%M:%S")
 
     # Append the latest query and response to the chat history
     st.session_state['chat_history'].append({"role": "user", "content": query})
     st.session_state['timestamps'].append(current_time)
-    st.session_state['chat_history'].append({"role": "assistant", "content": response.choices[0].message['content'].strip()})
+    st.session_state['chat_history'].append({"role": "assistant", "content": response_text})
     st.session_state['timestamps'].append(current_time)
 
-    return response.choices[0].message['content'].strip()
+    return response_text
 
 
 def main():
@@ -130,11 +135,10 @@ def main():
                           "Hereby you focus on giving a complete picture: elaborate why a topic is important, for what purposes its used and what technologies or techniques can be used after learing about this topic."
                           "Please also judge the course difficulty on a scale of 1 to 5 where 1 is beginner, and 5 is professional.",
         "module_overview": "You are a knowledgeable guide for module overviews. Your job is to create bullet points on related modules while giving the most important information in a short format. Preferably bullet points."
-                           "Hereby you list the ECTS, lecturers and module names. Group the modules either by lecturer, semester or subject of the topics when the user specifies his interests.",
-        "module_planning": "Your expertise is in providing assistance in setting up schedules and semester planning. Use your knowledge and the context to provide a schedule like response that helps the user plan his studies."
+                           "Hereby you list the ECTS, lecturers and module names. Group the modules either by lecturer, semester or subject of the topics when the user specifies his interests."
     }
 
-    # User settings for system context in an expander absed on the selected topic
+    # User settings for system context in an expander based on the selected topic
     with st.expander("Set System Context"):
         default_context = default_system_contexts.get(topic, "You are a helpful assistant.")
         system_context = st.text_area("Enter the fixed system context you want the model to use:",

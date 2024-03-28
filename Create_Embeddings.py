@@ -45,7 +45,7 @@ def load_and_chunk_texts(pdf_directory, documents, embedder_id):
 
 def create_faiss_index(embeddings):
     dimension = embeddings.shape[1]
-    index = faiss.IndexFlatL2(dimension)  # Use IndexFlatL2 for simplicity; consider other indexes for larger datasets
+    index = faiss.IndexFlatL2(dimension)
     index.add(embeddings)
     return index
 
