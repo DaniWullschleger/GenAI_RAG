@@ -3,6 +3,9 @@ venv/
 
 # Ignore configuration file with sensitive information
 config.txt
+dataset/_archive/
+dataset/wandb/
+dataset/config.txt
 
 # Other common ignores
 *.pyc
