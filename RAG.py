@@ -147,7 +147,7 @@ def main():
     # Adjust the system context based on the selected topic.
     with st.expander("Set System Context"):
         default_context = default_system_contexts.get(topic)
-        system_context = st.text_area(default_context, help="Enter the fixed system context you want the model to use:")
+        system_context = st.text_area("Enter the fixed system context you want the model to use:", default_context)
 
     # Sidebar for user settings on top_k, temperature and clearing chat history
     top_k = st.sidebar.number_input("Top K", min_value=1, max_value=10, value=5)
