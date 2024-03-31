@@ -7,23 +7,24 @@ import re
 import pickle
 from datetime import datetime
 
-# Function to read the API key from a file
+# Read the API key from a file (ignored on git)
 def read_api_key(file_path):
     with open(file_path, 'r') as file:
         return file.readline().strip()
 
 
-# Function to dynamically list available embedders for the selected topic
+# Dynamically list available embedders for the selected topic in the streamlit dropdown
 def list_available_embedders(topic):
     script_dir = os.path.dirname(os.path.abspath(__file__))
     embeddings_dir = os.path.join(script_dir, 'embeddings', topic)
+
+    # Regex expressions were done using ChatGPT
     embeddings_files = [f for f in os.listdir(embeddings_dir) if re.match(r'faiss_index_.*\.index', f)]
-    # Extract embedder names from filenames
     embedder_names = [re.sub(r'faiss_index_(.*)\.index', r'\1', f) for f in embeddings_files]
     return embedder_names
 
 
-# Function to load embeddings and documents for a given topic
+# Load embeddings and documents for a given topic
 def load_faiss_index_and_docs(topic, embedder_name):
     script_dir = os.path.dirname(os.path.abspath(__file__))
     embeddings_dir = os.path.join(script_dir, 'embeddings', topic)
@@ -38,17 +39,17 @@ def load_faiss_index_and_docs(topic, embedder_name):
     return faiss_index, docs
 
 
+# Search the FAISS index for matching documents
 def retrieve_documents(query_embedding, faiss_index, docs, top_k):
-    # Search the FAISS index
     distances, indices = faiss_index.search(query_embedding.reshape(1, -1), top_k)
     return [(docs[i], distances[0][j]) for j, i in enumerate(indices[0])]
 
 
+# Format the request, such that also the topic and some meta-data about the document are included.
+# Basic usage of a prompt template.
 def format_input_for_model(topic, query, retrieved_docs, ):
-    # Join the content of the retrieved documents, each potentially with a tag
     document_contexts = '\n'.join([f"- {doc[0]} (Relevance Score: {doc[1]:.2f})" for doc in retrieved_docs])
 
-    # Fill in the template
     query_context_template = f"""Topic: {topic}
     Question: {query}
     Relevant Information:
@@ -58,23 +59,27 @@ def format_input_for_model(topic, query, retrieved_docs, ):
     formatted_input = query_context_template.format(topic=topic, query=query, document_contexts=document_contexts)
     return formatted_input
 
+
 def generate_response(model, query, embeddings, docs, top_k, temperature, system_content, topic):
     # Encode the query to get its embedding
     query_embedding = model.encode([query]).astype('float32')
-    # Retrieve documents based on the query embedding
+
+    # Search the "nearest neighbors" of the query in the embedding space
     retrieved_docs = retrieve_documents(query_embedding, embeddings, docs, top_k)
 
-    # Format the input for the model using the template
+    # Format the input for the model using a basic template
     formatted_input = format_input_for_model(topic, query, retrieved_docs)
-    st.session_state['latest_query'] = formatted_input
 
-    # Include chat history in the messages
+
+    # Store the latest query and chat history in session state variables of streamlit (since streamlit runs the
+    # whole code at each interaction)
+    st.session_state['latest_query'] = formatted_input
     messages = st.session_state['chat_history'] + [
         {"role": "system", "content": system_content},
         {"role": "user", "content": formatted_input}
     ]
 
-    # Get a timestamp and generate the response
+    # Do the API call to get the response. Handle cases where the API key fails.
     try:
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
@@ -86,9 +91,10 @@ def generate_response(model, query, embeddings, docs, top_k, temperature, system
     except:
         response_text = "Error during API Call"
 
-    current_time = datetime.now().strftime("%H:%M:%S")
 
-    # Append the latest query and response to the chat history
+
+    # Add latest query and resonse including time stamp to the chat history.
+    current_time = datetime.now().strftime("%H:%M:%S")
     st.session_state['chat_history'].append({"role": "user", "content": query})
     st.session_state['timestamps'].append(current_time)
     st.session_state['chat_history'].append({"role": "assistant", "content": response_text})
@@ -98,27 +104,27 @@ def generate_response(model, query, embeddings, docs, top_k, temperature, system
 
 
 def main():
-    # Initialize API key
+    # Fetch the locally stored API key
     api_key_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'config.txt')
     openai.api_key = read_api_key(api_key_file_path)
 
     st.title('RAG System Demo')
 
-    # Check whether there is already a chat history present, since streamlit runs main function at each user interaction.
+    # Only initialize the chat history if none exists yet.
     if 'chat_history' not in st.session_state:
         st.session_state['chat_history'] = []
-    if 'timestamps' not in st.session_state:  # Initialize timestamps in session_state
+    if 'timestamps' not in st.session_state:
         st.session_state['timestamps'] = []
     if 'latest_query' not in st.session_state:
         st.session_state['latest_query'] = ""
 
-    # Dynamically list available topics based on directory names
+    # Dynamically list available topics based on the directories created in Create_Embeddings.py
     script_dir = os.path.dirname(os.path.abspath(__file__))
     embeddings_dir = os.path.join(script_dir, 'embeddings')
     topics = [d for d in os.listdir(embeddings_dir) if os.path.isdir(os.path.join(embeddings_dir, d))]
     topic = st.selectbox('Select your topic of interest:', topics)
 
-    # Select available embedders based on the selected topic
+    # List available embedders based on the selected topic
     embedder_names = list_available_embedders(topic)
     selected_embedder = st.selectbox('Select an embedder:', embedder_names)
 
@@ -129,7 +135,7 @@ def main():
     # Load the embeddings and documents for the selected topic and embedder
     embeddings, docs = load_faiss_index_and_docs(topic, selected_embedder)
 
-    # Define default system contexts for each topic
+    # Basic system contexts to provide the model with some topic-specific instructions
     default_system_contexts = {
         "module_details": "You are a helpful assistant specializing in Module Details. You should focus on providing details on the topic that the user is interested in."
                           "Hereby you focus on giving a complete picture: elaborate why a topic is important, for what purposes its used and what technologies or techniques can be used after learing about this topic."
@@ -138,21 +144,20 @@ def main():
                            "Hereby you list the ECTS, lecturers and module names. Group the modules either by lecturer, semester or subject of the topics when the user specifies his interests."
     }
 
-    # User settings for system context in an expander based on the selected topic
+    # Adjust the system context based on the selected topic.
     with st.expander("Set System Context"):
-        default_context = default_system_contexts.get(topic, "You are a helpful assistant.")
-        system_context = st.text_area("Enter the fixed system context you want the model to use:",
-                                            default_context,
-                                            help="This context helps guide the model's behavior.")
+        default_context = default_system_contexts.get(topic)
+        system_context = st.text_area(default_context, help="Enter the fixed system context you want the model to use:")
 
     # Sidebar for user settings on top_k, temperature and clearing chat history
     top_k = st.sidebar.number_input("Top K", min_value=1, max_value=10, value=5)
     temperature = st.sidebar.slider("Temperature", min_value=0.0, max_value=2.0, value=0.7)
 
+    # Handle "Clear Chat History" button-click by re-initializing the session state.
     if st.sidebar.button('Clear Chat History'):
-        # Clear chat history and timestamps by reinitializing them in session_state
         st.session_state['chat_history'] = []
         st.session_state['timestamps'] = []
+        st.session_state['latest_query'] = ""
         st.sidebar.success('Chat history cleared!')
 
     # Text field and button for submitting a query
@@ -167,7 +172,7 @@ def main():
     with query_expander:
         st.text(st.session_state['latest_query'])
 
-    # Expander to display chat history in reverse order (New on top, Old below)
+    # Expander to display chat history in reverse order (New on top, Old below). Code Snippet created using ChatGPT
     chat_expander = st.expander("Show Chat History", expanded=False)
     with chat_expander:
         # Use slicing to get pairs of (user, assistant) messages for display
@@ -190,6 +195,7 @@ def main():
             # Visually separate conversations except after last message
             if i > 0:
                 chat_expander.markdown("---")
+
 
 if __name__ == "__main__":
     main()

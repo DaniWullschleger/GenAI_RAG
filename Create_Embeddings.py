@@ -8,6 +8,7 @@ import faiss
 import pickle
 
 
+# Deletes files and folder before we store "new" ones. Created using ChatGPT
 def clear_directory(folder_path):
     for filename in os.listdir(folder_path):
         file_path = os.path.join(folder_path, filename)
@@ -30,6 +31,8 @@ def load_and_chunk_texts(pdf_directory, documents, embedder_id):
         chunk_size = doc["embedders"][embedder_id]["chunk_size"]
         overlap = doc["embedders"][embedder_id]["overlap"]
         pdf_path = os.path.join(pdf_directory, filename)
+
+        # Text Splitting, including overlap created using ChatGPT
         try:
             with fitz.open(pdf_path) as doc:
                 for page in doc:
@@ -50,6 +53,7 @@ def create_faiss_index(embeddings):
     return index
 
 def main():
+    # We want to compare 4 different embedders as a starting point.
     embedders = [
         'all-MiniLM-L6-v2',
         'bert-base-nli-mean-tokens',
@@ -57,12 +61,13 @@ def main():
         'all-mpnet-base-v2'
     ]
 
-    # Directories setup
+    # Setting up directory variables.
     script_dir = os.path.dirname(os.path.abspath(__file__))
     pdf_base_directory = os.path.join(script_dir, 'data')
     storage_dir = os.path.join(script_dir, 'embeddings')
     os.makedirs(storage_dir, exist_ok=True)
 
+    # Define chunk sizes per topic, document and embedder
     topics_config = {
         "module_overview": {
             "documents": [
@@ -107,9 +112,12 @@ def main():
         os.makedirs(topic_dir, exist_ok=True)
         clear_directory(topic_dir)
 
+    # Iterate through all embedders and topics to locally store them.
+    # Idea: Embedders are created before the streamlit GUI is used to interact with them. This way, loading times
+    # in the GUI are reduced and the overall experience is more "responsive"
     for embedder_id in embedders:
         print(f"Processing with embedder: {embedder_id}")
-        model = SentenceTransformer(embedder_id)  # Initialize the model for the current embedder
+        model = SentenceTransformer(embedder_id)
 
         for topic, config in topics_config.items():
             topic_dir = os.path.join(storage_dir, topic)
@@ -117,13 +125,15 @@ def main():
             os.makedirs(pdf_directory, exist_ok=True)
             texts = load_and_chunk_texts(pdf_directory, config["documents"], embedder_id)
 
+            # Measure time to see the embedders performance in "training" time
             start_time = time.time()
-            docs_embeddings = model.encode(texts, show_progress_bar=True)  # Generate embeddings
+            docs_embeddings = model.encode(texts, show_progress_bar=True)
             end_time = time.time()
             duration = end_time - start_time
 
             # Convert embeddings to NumPy array for FAISS
             docs_embeddings_np = np.array(docs_embeddings).astype('float32')
+
             # Create and store FAISS index
             faiss_index = create_faiss_index(docs_embeddings_np)
             index_path = os.path.join(topic_dir, f'faiss_index_{embedder_id}.index')
