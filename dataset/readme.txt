@@ -1,5 +1,0 @@
-- Benötigt ebenfalls ein config.txt File mit einem API Key für OpenAI
-- Dataset-Creation / Embeddings-Creation nur auszuführen, falls man den Embedder angepasst hat
-- Datensatz mit Fragen "pairs" existiert bereits und es muss für die Validation lediglich eines der Validation Skripts verwendet werden
-	- Excel-Version für ein Output mit den Scores als neues CSV
-	- WANDB-Version für Generierung eines neuen Sweeps im W&B Workspace (setzt API-Key voraus)
