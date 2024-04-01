@@ -1,19 +1,18 @@
 import random
 import pandas as pd
 from sentence_transformers import SentenceTransformer
-import faiss
 import fitz
 import os
 import openai
 import json
 import csv
-import pickle
 
 # Read API Key
 def read_api_key(file_path):
     with open(file_path, 'r') as file:
         return file.readline().strip()
 
+# Loading each document and chunking it with given embedder
 def load_and_chunk_texts(pdf_directory, documents, embedder_id):
     texts = []
     for doc in documents:
@@ -33,6 +32,7 @@ def load_and_chunk_texts(pdf_directory, documents, embedder_id):
                         chunk = ' '.join(words[i:i + chunk_size])
                         texts.append(chunk)
         except Exception as e:
+            # Comprehensive fail-over strategy can be implemented here - however, this is not scope of the project and therefore ommitted
             print(f"Error processing {filename}: {e}")
     return texts
 
@@ -47,6 +47,7 @@ def generate_question_answer_pairs(texts, n_pairs, temperature):
 
   for _ in range(n_pairs):
 
+    # Get random chunk on which the question should be based
     context = random.choice(texts)
 
     prompt = f"""Assume the role of a student at HSLU with questions about modules, their content, and related information, seeking guidance from the RAG system.
@@ -69,7 +70,8 @@ def generate_question_answer_pairs(texts, n_pairs, temperature):
       Output:::"""
 
   
-    try: # Generate a question-answer pair
+    try: # Generate a question-answer pair for that chunk
+        # Source: https://platform.openai.com/docs/api-reference/streaming?lang=python
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=[
@@ -79,7 +81,8 @@ def generate_question_answer_pairs(texts, n_pairs, temperature):
             max_tokens=300,
             temperature=temperature
             )
-            
+
+        # Load the response    
         output = json.loads(response.choices[0].message.content.strip())
         new_row = pd.DataFrame({"context": context,
                          "question": output['question'],
@@ -90,7 +93,7 @@ def generate_question_answer_pairs(texts, n_pairs, temperature):
         
     except Exception as e:
         print(f"Failover strategy activated due to: {e}")
-        # Implement failover strategy here
+        # Comprehensive fail-over strategy can be implemented here - however, this is not scope of the project and therefore ommitted
         continue
   
   return qa_pairs
@@ -100,6 +103,8 @@ def evaluate_question(dataset, temperature):
 
     print("Evaluating question and answer pairs...")
 
+    # Used further information to increase accuracy of scoring.
+    # Source: Chat-GPT, https://huggingface.co/learn/cookbook/en/rag_evaluation
     combined_prompt = """
     You will be given a question and a context (if applicable). Your task is to perform the following evaluations:
 
@@ -157,13 +162,18 @@ def evaluate_question(dataset, temperature):
 
     score_columns = ["groundedness_score", "relevance_score", "standalone_score"]
 
-    for index, row in dataset.iterrows():  # Iterate through DataFrame rows
+    # Iterate through questions in dataframe
+    for index, row in dataset.iterrows():
+        # Extract context and questions
         question = row['question']
         context = row['context']
 
+        # Combine both into prompt
         filled_prompt = combined_prompt.format(question=question, context=context)
 
         try:
+            # Generate response
+            # Source: https://platform.openai.com/docs/api-reference/streaming?lang=python
             response = openai.ChatCompletion.create(
                 model="gpt-3.5-turbo",
                 messages=[{"role": "system",
@@ -184,7 +194,7 @@ def evaluate_question(dataset, temperature):
 
         except Exception as e:
             print(f"Failover strategy activated due to: {e}")
-            # Implement failover strategy here
+            # Comprehensive fail-over strategy can be implemented here - however, this is not scope of the project and therefore ommitted
             continue
 
         # Calculate mean score  
@@ -194,6 +204,7 @@ def evaluate_question(dataset, temperature):
 
 def main():
 
+    # Determine Temperature and number of QA-pairs to generate
     TEMPERATURE = 0.2
     N_PAIRS = 250
 

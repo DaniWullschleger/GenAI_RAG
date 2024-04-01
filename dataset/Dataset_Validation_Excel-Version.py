@@ -7,7 +7,7 @@ import pandas as pd
 import csv
 import json
 
-# Function to read the API key from a file
+# Function to read the OpenAI API key from a txt file
 def read_api_key(file_path):
     with open(file_path, 'r') as file:
         return file.readline().strip()
@@ -59,6 +59,7 @@ def generate_response(model, query, chunk, overlap, embeddings, docs, top_k, tem
     reference_answer = dataset.loc[index, "answer"]
 
     # Prompt
+    # Taken and adapted from source: https://huggingface.co/learn/cookbook/en/rag_evaluation
     system_content = f"""
     **Overall Task:**
 
@@ -89,7 +90,7 @@ def generate_response(model, query, chunk, overlap, embeddings, docs, top_k, tem
     Answer:::
     """
     
-    # Include chat history in the messages
+    # Combine the context for the message to pass
     messages = [
         {"role": "system", "content": system_content},
         {"role": "user", "content": formatted_input}
@@ -100,6 +101,7 @@ def generate_response(model, query, chunk, overlap, embeddings, docs, top_k, tem
     try:
 
         # Generate the response
+        # Source: https://platform.openai.com/docs/api-reference/streaming?lang=python
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=messages,
@@ -114,6 +116,7 @@ def generate_response(model, query, chunk, overlap, embeddings, docs, top_k, tem
         # dataset.loc[index, f"answ_{params}"] = output['answer']
 
     except Exception as e:
+        # Comprehensive fail-over strategy can be implemented here - however, this is not scope of the project and therefore ommitted
         print(f"Failover strategy activated due to: {e}")
         dataset.loc[index, f"acc_{params}"] = None
         # dataset.loc[index, f"answ_{params}"] = None  
@@ -137,7 +140,7 @@ def main():
     # Read in dataset with questions/answers
     dataset = pd.read_csv("pairs.csv", sep=';', encoding='utf-8', quoting=csv.QUOTE_MINIMAL, escapechar="\\")
 
-    # Sidebar for user settings on top_k, temperature and clearing chat history
+    # Hyperparameter Tuning options
     chunk_var = [200, 400, 600]
     overlap_var = [50, 100]
     top_k = [2, 4, 6]
@@ -155,6 +158,8 @@ def main():
                         # Pass dataset and enrich it with answer generation
                         generate_response(model, query, chunk, overlap, embeddings, docs, k, temp, dataset, index)
 
+    # Save dataset - as the chunks contain different ranges, a special export needed to be performed to ensure it can be read properly
+    # Source: Chat-GPT
     dataset.to_csv("eval_dataset.csv", index=False, encoding='utf-8', sep='|', quoting=csv.QUOTE_MINIMAL, escapechar="\\")
 
 if __name__ == "__main__":

@@ -9,10 +9,10 @@ import json
 import wandb
 
 # WAND Library requires an account and the corresponding API Key from:
-# https://wandb.ai
-# Over CLI, use "wandb login" to specify your API Key
+# Source: https://wandb.ai
+# Over CLI, use "wandb login" to specify the API Key
 
-# Function to read the API key from a file for Openai
+# Function to read the API key from a file for OpenAI
 def read_api_key(file_path):
     with open(file_path, 'r') as file:
         return file.readline().strip()
@@ -65,6 +65,7 @@ def generate_response(model, query, chunk, overlap, embeddings, docs, top_k, tem
     reference_answer = dataset.loc[index, "answer"]
 
     # Prompt
+    # Inspired and adapted by source: https://huggingface.co/learn/cookbook/en/rag_evaluation
     system_content = f"""
     **Overall Task:**
 
@@ -106,6 +107,7 @@ def generate_response(model, query, chunk, overlap, embeddings, docs, top_k, tem
     try:
 
         # Generate the response
+        # Source: https://platform.openai.com/docs/api-reference/streaming?lang=python
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=messages,
@@ -143,16 +145,23 @@ def train_and_evaluate():
         k = run.config.top_k
         temp = run.config.temperature
 
+        # Load the embeddings and docs to be used for response generation
         embeddings, docs = load_faiss_index_and_docs(topic, selected_embedder, chunk, overlap)
 
+        # Counter
         i = 0
+
+        # Total accuracy per combination
         acc_total = 0
         
         for index, row in dataset.iterrows():
+            # Generate new answer for question and score it depending on the reference answer
             query = row['question']
             score = generate_response(model, query, chunk, overlap, embeddings, docs, k, temp, dataset, index)    
             i += 1
-            acc_total += score / 5
+
+            # Add scoring accuracy to total accuracy
+            acc_total += (score - 1) / 4
             
         acc_total = acc_total / i
         # Log metrics
@@ -163,6 +172,8 @@ def main():
     api_key_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'config.txt')
     openai.api_key = read_api_key(api_key_file_path)
 
+    # Specify sweep config
+    # Source: https://docs.wandb.ai/guides/sweeps/define-sweep-configuration
     sweep_config = {
     'method': 'grid',  # Grid to check all combinations of parameters
     'metric': {
@@ -177,6 +188,8 @@ def main():
         }
     }
 
+    # Start Sweeping Agent
+    # Source: https://docs.wandb.ai/guides/sweeps/start-sweep-agents
     sweep_id = wandb.sweep(sweep_config, project="llm_eval")
     wandb.agent(sweep_id, train_and_evaluate)
 

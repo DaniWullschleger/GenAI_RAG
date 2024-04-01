@@ -7,7 +7,7 @@ import shutil
 import faiss
 import pickle
 
-
+# Clearing directory - optional
 def clear_directory(folder_path):
     for filename in os.listdir(folder_path):
         file_path = os.path.join(folder_path, filename)
@@ -17,9 +17,10 @@ def clear_directory(folder_path):
             elif os.path.isdir(file_path):
                 shutil.rmtree(file_path)
         except Exception as e:
+            # Comprehensive fail-over strategy can be implemented here - however, this is not scope of the project and therefore ommitted
             print(f'Failed to delete {file_path}. Reason: {e}')
 
-
+# Load each document from provided list and break it up in chunks
 def load_and_chunk_texts(pdf_directory, documents, embedder_id):
     texts = []
     for doc in documents:
@@ -37,17 +38,18 @@ def load_and_chunk_texts(pdf_directory, documents, embedder_id):
                     words = text.split()
                     for i in range(0, len(words), chunk_size - overlap):
                         chunk = ' '.join(words[i:i + chunk_size])
-                        # Needed to add removal of wavy brackets, as some chunks with these have shown to not being properly handled when passed into a prompt
+                        # Needed to add removal of wavy brackets, as some chunks with these have shown to not being properly handled when used for prompting
                         chunk = chunk.replace('{', '').replace('}', '')
                         texts.append(chunk)
         except Exception as e:
+            # Comprehensive fail-over strategy can be implemented here - however, this is not scope of the project and therefore ommitted
             print(f"Error processing {filename}: {e}")
     return texts
 
-
+# Creating an index using the faiss library
 def create_faiss_index(embeddings):
     dimension = embeddings.shape[1]
-    index = faiss.IndexFlatL2(dimension)  # Use IndexFlatL2 for simplicity; consider other indexes for larger datasets
+    index = faiss.IndexFlatL2(dimension)
     index.add(embeddings)
     return index
 
@@ -62,9 +64,11 @@ def main():
     storage_dir = os.path.join(script_dir, 'embeddings')
     os.makedirs(storage_dir, exist_ok=True)
 
+    # List of Hyperparameters of interest for prompting
     chunk_var = [200, 400, 600]
     overlap_var = [50, 100]
 
+    # Iterate through each option and combination
     for chunk in chunk_var:
         for overlap in overlap_var:
             topics_config = {
@@ -80,30 +84,31 @@ def main():
                 }
             }
 
-            # Clear the topic-specific directory before storing new embeddings
+            # Clear the topic-specific directory before storing new embeddings - optional
             """
             for topic, config in topics_config.items():
                 topic_dir = os.path.join(storage_dir, topic)
                 os.makedirs(topic_dir, exist_ok=True)
                 clear_directory(topic_dir)
             """
+            # Try with each embedder (for our project, only the embedder 'all-mpnet-base-v2' will be regarded
             for embedder_id in embedders:
                 print(f"Processing with embedder: {embedder_id}")
                 model = SentenceTransformer(embedder_id)  # Initialize the model for the current embedder
 
+                # Iterate through each document and provided embedder in config to create embedding
                 for topic, config in topics_config.items():
                     topic_dir = os.path.join(storage_dir, topic)
                     pdf_directory = os.path.join(pdf_base_directory, topic)
                     os.makedirs(pdf_directory, exist_ok=True)
                     texts = load_and_chunk_texts(pdf_directory, config["documents"], embedder_id)
 
-                    start_time = time.time()
-                    docs_embeddings = model.encode(texts, show_progress_bar=True)  # Generate embeddings
-                    end_time = time.time()
-                    duration = end_time - start_time
-
+                     # Generate embeddings
+                    docs_embeddings = model.encode(texts, show_progress_bar=True)
+                    
                     # Convert embeddings to NumPy array for FAISS
                     docs_embeddings_np = np.array(docs_embeddings).astype('float32')
+                    
                     # Create and store FAISS index
                     faiss_index = create_faiss_index(docs_embeddings_np)
                     index_path = os.path.join(topic_dir, f'faiss_index_{embedder_id}_{chunk}-{overlap}.index')
